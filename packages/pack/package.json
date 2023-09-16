@@ -1,6 +1,6 @@
 {
   "name": "@daks.dev/svelte.pack",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "DAKS.DEV Svelte PACK",
   "scripts": {
     "package": "svelte-kit sync && svelte-package && publint",
@@ -12,10 +12,10 @@
     "format": "prettier --plugin=prettier-plugin-svelte --write ."
   },
   "devDependencies": {
-    "@daks.dev/svelte-iconify": "^0.2.6",
-    "@daks.dev/svelte-yandex": "^0.2.3",
-    "@daks.dev/svelte.kit": "^0.1.4",
-    "@daks.dev/vite-imagetools": "^0.2.4",
+    "@daks.dev/svelte-iconify": "^0.2.7",
+    "@daks.dev/svelte-yandex": "^0.2.4",
+    "@daks.dev/svelte.kit": "^0.1.5",
+    "@daks.dev/vite-imagetools": "^0.2.5",
     "@sveltejs/kit": "^1.25.0",
     "@sveltejs/package": "^2.2.2",
     "@vitest/ui": "^0.34.4",
@@ -96,7 +96,7 @@
   "types": "./dist/index.d.ts",
   "type": "module",
   "engines": {
-    "node": ">=19.9.0",
+    "node": ">=16.20.2",
     "pnpm": "^8.7.0"
   },
   "packageManager": "pnpm@8.7.5",
