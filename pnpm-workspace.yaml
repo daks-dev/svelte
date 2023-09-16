@@ -1,0 +1,5 @@
+packages:
+  - 'packages/*'
+  - 'sites/gkcck'
+  - 'sites/skm'
+  - 'sites/su363'
