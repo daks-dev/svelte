@@ -11,7 +11,9 @@
   "semi": true,
   "singleAttributePerLine": true,
   "bracketSameLine": true,
-  "plugins": ["prettier-plugin-svelte"],
+  "vueIndentScriptAndStyle": false,
+  "embeddedLanguageFormatting": "auto",
+  "plugins": ["prettier-plugin-svelte", "prettier-plugin-tailwindcss"],
   "overrides": [
     {
       "files": "*.svelte",

@@ -31,7 +31,7 @@ export function globInfoset(idxs: string[], data: Record<string, unknown>): Meta
       ),
       res
     ),
-    {} as MetadataS
+    <MetadataS>{}
   );
 }
 

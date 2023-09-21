@@ -5,8 +5,9 @@
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:markdown/recommended",
+    "plugin:mdx/recommended",
     "plugin:svelte/recommended",
+    "plugin:tailwindcss/recommended",
     "prettier"
   ],
   "env": {
@@ -14,12 +15,17 @@
     "node": true,
     "es2024": true
   },
-  "plugins": ["svelte", "unicorn"],
-  //
-  // "parser": "@typescript-eslint/parser",
+  "plugins": ["prettier", "svelte", "unicorn"],
+  "settings": {
+    "mdx/code-blocks": true,
+    "mdx/remark": true
+  },
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    },
     "extraFileExtensions": [".svelte"]
   },
   "overrides": [
@@ -27,20 +33,29 @@
       "files": ["**/*.svelte"],
       "parser": "svelte-eslint-parser",
       "parserOptions": {
-        "parser": "@typescript-eslint/parser"
+        "parser": "@typescript-eslint/parser",
+        "ecmaFeatures": {
+          "jsx": false
+        }
       },
       "rules": {
-        "no-undef": "off"
+        "no-undef": "off",
+        "svelte/no-at-html-tags": "off"
+      }
+    },
+    {
+      "files": ["**/*.{md,mdx}", "**/*.{md,mdx}/*.{js,jsx,ts,tsx,svelte}"],
+      "rules": {
+        "@typescript-eslint/no-unused-vars": "off"
       }
     }
   ],
-  "ignorePatterns": ["**/.svelte-kit/", "**/.master/", "**/.vscode/", "**/build/", "**/dist/"],
   "rules": {
     "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/no-unused-vars": [
       "error",
       { "args": "after-used", "argsIgnorePattern": "^_" }
-    ],
-    "svelte/no-at-html-tags": "off"
-  }
+    ]
+  },
+  "ignorePatterns": ["**/.svelte-kit/", "**/.master/", "**/.vscode/", "**/build/", "**/dist/"]
 }

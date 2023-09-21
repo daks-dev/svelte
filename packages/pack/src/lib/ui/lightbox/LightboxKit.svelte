@@ -52,7 +52,7 @@
   {...$$restProps}>
   <svelte:fragment slot="thumbnail">
     {#each thumbnails as data, idx}
-      <LightboxThumbnail class={twMerge(sign && 'relative group')}>
+      <LightboxThumbnail class={twMerge(sign && 'group relative')}>
         {#if _sign}
           <Sign {..._sign} />
         {/if}
@@ -93,7 +93,7 @@
       {subtitle}
       {description}>
       <img
-        class="bg-no-repeat bg-center bg-1/10 bg-loading"
+        class="bg-1/10 bg-loading bg-center bg-no-repeat"
         {src}
         {width}
         {height}

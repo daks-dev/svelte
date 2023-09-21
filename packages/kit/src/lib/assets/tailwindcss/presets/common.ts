@@ -18,7 +18,7 @@ const sort = (obj) =>
 */
 
 export default {
-  content: ['./node_modules/@daks.dev/svelte.kit/dist/**/*.{svelte,html,js,ts}'],
+  content: ['./node_modules/@daks.dev/svelte.kit/dist/**/*.{html,js,jsx,ts,tsx,md,mdx,svelte}'],
 
   darkMode: 'class',
 

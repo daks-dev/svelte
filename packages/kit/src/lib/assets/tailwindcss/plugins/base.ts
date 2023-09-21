@@ -5,34 +5,49 @@ import plugin from 'tailwindcss/plugin.js';
 export default plugin(({ addBase }) => {
   addBase({
     [':root']: {
-      '--scrollbar-size': '6px',
+      '--scrollbar-size': '5px',
+      '--scrollbar-thumb-bg-color': colors.slate[400],
+      '--scrollbar-track-bg-color': 'transparent', // colors.slate[500]
       '--progress-height': '4px',
-      '--progress-color': colors.slate[600],
-      '--progress-bg-color': colors.slate[400]
+      '--progress-color': colors.slate[400],
+      '--progress-bg-color': colors.slate[700]
     },
+
     ['::selection']: {
       color: 'rgb(229 231 235)',
       'background-color': 'rgb(118 169 250)'
     },
-    ['::-webkit-scrollbar-track']: {
-      '-webkit-overflow-scrolling': 'touch',
-      '-webkit-box-shadow': 'inset 0 0 8px rgba(0, 0, 0, 0.3)',
-      'background-color': 'rgb(107 114 128)',
-      'border-radius': '0.5rem',
-      'box-shadow': 'inset 0 0 8px rgba(0, 0, 0, 0.3)'
-    },
+
     ['::-webkit-scrollbar']: {
       '-webkit-overflow-scrolling': 'touch',
       width: 'var(--scrollbar-size)',
       height: 'var(--scrollbar-size)',
-      'background-color': 'rgb(107 114 128)'
+      'background-color': 'var(--scrollbar-track-bg-color)'
     },
     ['::-webkit-scrollbar-thumb']: {
       '-webkit-overflow-scrolling': 'touch',
-      '-webkit-box-shadow': 'inset 0 0 8px rgba(0, 0, 0, 0.3)',
-      'background-color': 'rgb(31 41 55)',
+      '-webkit-background-clip': 'content-box',
+      // '-webkit-box-shadow': 'inset 0 0 8px rgba(0, 0, 0, 0.25)',
+      // border: '2px solid transparent',
       'border-radius': '0.5rem',
-      'box-shadow': 'inset 0 0 8px rgba(0, 0, 0, 0.3)'
+      'background-color': 'var(--scrollbar-thumb-bg-color)'
+      // 'background-clip': 'content-box',
+      // 'box-shadow': 'inset 0 0 8px rgba(0, 0, 0, 0.25)'
+    },
+    /*
+    ['::-webkit-scrollbar-thumb:hover']: {
+      '-webkit-background-clip': 'border-box',
+      '-webkit-box-shadow': 'none',
+      'background-clip': 'border-box',
+      'box-shadow': 'none'
+    },
+    */
+    ['::-webkit-scrollbar-track']: {
+      '-webkit-overflow-scrolling': 'touch',
+      '-webkit-box-shadow': 'inset 0 0 8px rgba(80, 80, 80, 0.25)',
+      'border-radius': '0.5rem',
+      'box-shadow': 'inset 0 0 8px rgba(80, 80, 80, 0.25)',
+      'background-color': 'var(--scrollbar-track-bg-color)'
     },
 
     ['progress']: {

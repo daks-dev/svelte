@@ -17,7 +17,7 @@
     "@vitest/ui": "^0.34.4",
     "jsdom": "22.1.0",
     "publint": "^0.2.2",
-    "svelte-check": "^3.5.1",
+    "svelte-check": "^3.5.2",
     "tslib": "^2.6.2",
     "typescript": "^5.2.2",
     "vite": "^4.4.9",
@@ -71,7 +71,6 @@
     "node": ">=16.20.2",
     "pnpm": "^8.7.0"
   },
-  "packageManager": "pnpm@8.7.5",
   "browserslist": [
     "last 2 version",
     "not dead"

@@ -5,7 +5,7 @@ import type { Config } from 'tailwindcss';
 export default {
   content: [
     ...common.content,
-    './node_modules/@daks.dev/svelte.pack/dist/**/*.{svelte,html,js,ts}'
+    './node_modules/@daks.dev/svelte.pack/dist/**/*.{html,js,jsx,ts,tsx,md,mdx,svelte}'
   ],
 
   presets: [fontFamily, common],
