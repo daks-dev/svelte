@@ -1,6 +1,6 @@
 {
   "name": "@daks.dev/vite-imagetools",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "DAKS Svelte Imagetools PKG",
   "scripts": {
     "package": "svelte-kit sync && svelte-package && publint",

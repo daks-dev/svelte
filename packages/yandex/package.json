@@ -1,6 +1,6 @@
 {
   "name": "@daks.dev/svelte-yandex",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "DAKS Svelte Yandex PKG",
   "scripts": {
     "package": "svelte-kit sync && svelte-package && publint",
