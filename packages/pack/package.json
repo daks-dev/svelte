@@ -12,10 +12,10 @@
     "format": "prettier --plugin=prettier-plugin-svelte --write ."
   },
   "devDependencies": {
-    "@daks.dev/svelte-iconify": "^0.2.7",
-    "@daks.dev/svelte-yandex": "^0.2.4",
+    "@daks.dev/svelte-iconify": "^0.2.8",
+    "@daks.dev/svelte-yandex": "^0.2.5",
     "@daks.dev/svelte.kit": "^0.1.6",
-    "@daks.dev/vite-imagetools": "^0.2.5",
+    "@daks.dev/vite-imagetools": "^0.2.6",
     "@sveltejs/kit": "^1.25.0",
     "@sveltejs/package": "^2.2.2",
     "@vitest/ui": "^0.34.4",
