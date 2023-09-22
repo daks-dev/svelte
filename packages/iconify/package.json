@@ -16,7 +16,7 @@
     "@sveltejs/kit": "^1.25.0",
     "@sveltejs/package": "^2.2.2",
     "@types/cookie": "^0.5.2",
-    "@vitest/ui": "^0.34.4",
+    "@vitest/ui": "^0.34.5",
     "cookie": "^0.5.0",
     "esm-env": "^1.0.0",
     "iconify-icon": "^1.0.8",
@@ -27,7 +27,7 @@
     "tslib": "^2.6.2",
     "typescript": "^5.2.2",
     "vite": "^4.4.9",
-    "vitest": "^0.34.4"
+    "vitest": "^0.34.5"
   },
   "peerDependencies": {
     "@iconify/svelte": "^3.1.4",

@@ -18,7 +18,7 @@
     "@daks.dev/vite-imagetools": "^0.2.6",
     "@sveltejs/kit": "^1.25.0",
     "@sveltejs/package": "^2.2.2",
-    "@vitest/ui": "^0.34.4",
+    "@vitest/ui": "^0.34.5",
     "dotenv": "^16.3.1",
     "esm-env": "^1.0.0",
     "jsdom": "22.1.0",
@@ -30,7 +30,7 @@
     "tslib": "^2.6.2",
     "typescript": "^5.2.2",
     "vite": "^4.4.9",
-    "vitest": "^0.34.4"
+    "vitest": "^0.34.5"
   },
   "peerDependencies": {
     "@daks.dev/svelte-iconify": "^0.2.5",
