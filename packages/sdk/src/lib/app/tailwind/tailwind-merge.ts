@@ -1,5 +1,5 @@
 import { getDefaultConfig, mergeConfigs, extendTailwindMerge, type Config } from 'tailwind-merge';
-import { twmerge as external } from '../../stores/nano/index.js';
+import { twmerge as external } from '../../stores/nano.js';
 
 export const getTwClassGroup = (key?: string): void => {
   const config: Config = getDefaultConfig();
@@ -13,6 +13,8 @@ const local = {
   'font-size': [{ text: ['3xs', '2xs', '1.5xl', '2.5xl', '3.5xl', '4.5xl'] }],
   'list-style-type': [{ list: ['circle', 'square'] }]
 };
+
+// const external = $twmerge;
 
 export const getTwMerge = () =>
   extendTailwindMerge(

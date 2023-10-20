@@ -1,5 +1,13 @@
 import { readable, writable } from 'svelte/store';
 
+export const twmerge = (() => {
+  const { subscribe, set } = writable<Record<string, Record<string, string[]>[]>>();
+  return {
+    subscribe,
+    set
+  };
+})();
+
 interface Navigate {
   prev?: { href: string; title?: string };
   next?: { href: string; title?: string };
