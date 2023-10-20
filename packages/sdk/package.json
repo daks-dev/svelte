@@ -1,0 +1,159 @@
+{
+  "name": "@daks.dev/svelte.sdk",
+  "version": "0.1.0",
+  "description": "DAKS.DEV Svelte SDK",
+  "scripts": {
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "test": "vitest --ui",
+    "lint": "prettier --plugin=prettier-plugin-svelte --check . && eslint .",
+    "format": "prettier --plugin=prettier-plugin-svelte --write .",
+    "package": "svelte-kit sync && svelte-package && publint",
+    "prepublishOnly": "pnpm run package",
+    "run:publish": "pnpm publish",
+    "run:update": "pnpm up"
+  },
+  "devDependencies": {
+    "@iconify/svelte": "^3.1.4",
+    "@nanostores/persistent": "^0.9.1",
+    "@neoconfetti/svelte": "^1.0.0",
+    "@rollup/pluginutils": "^5.0.5",
+    "@rollup/plugin-yaml": "^4.1.2",
+    "@sveltejs/kit": "^1.26.0",
+    "@sveltejs/package": "^2.2.2",
+    "@types/cookie": "^0.5.3",
+    "@types/html-minifier-terser": "^7.0.1",
+    "@types/js-yaml": "^4.0.8",
+    "@vitest/ui": "^0.34.6",
+    "cookie": "^0.5.0",
+    "esm-env": "^1.0.0",
+    "iconify-icon": "^1.0.8",
+    "js-yaml": "^4.1.0",
+    "html-minifier-terser": "^7.2.0",
+    "nanostores": "^0.9.4",
+    "publint": "^0.2.5",
+    "svelte": "^4.2.2",
+    "svelte-check": "^3.5.2",
+    "tailwind-merge": "^1.14.0",
+    "tailwindcss": "^3.3.3",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2",
+    "vanilla-lazyload": "^17.8.5",
+    "vite": "^4.5.0",
+    "vite-imagetools": "^6.0.0",
+    "vitest": "^0.34.6"
+  },
+  "peerDependencies": {
+    "@sveltejs/kit": "^1.26.0",
+    "svelte": "^4.2.2"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "svelte": "./dist/index.js"
+    },
+    "./types": {
+      "types": "./dist/types.d.ts"
+    },
+    "./stores": {
+      "types": "./dist/stores/index.d.ts",
+      "import": "./dist/stores/index.js"
+    },
+    "./stores/*": {
+      "types": "./dist/stores/*.d.ts",
+      "import": "./dist/stores/*.js"
+    },
+    "./server": {
+      "types": "./dist/server/index.d.ts",
+      "import": "./dist/server/index.js"
+    },
+    "./utils": {
+      "types": "./dist/utils/index.d.ts",
+      "import": "./dist/utils/index.js"
+    },
+    "./utils/*": {
+      "types": "./dist/utils/*.d.ts",
+      "import": "./dist/utils/*.js"
+    },
+    "./vite": {
+      "types": "./dist/server/vite.d.ts",
+      "import": "./dist/server/vite.js"
+    },
+    "./tailwind": {
+      "types": "./dist/app/tailwind/index.d.ts",
+      "import": "./dist/app/tailwind/index.js",
+      "require": "./dist/app/tailwind/index.js"
+    },
+    "./tailwind/*": {
+      "types": "./dist/app/tailwind/*.d.ts",
+      "import": "./dist/app/tailwind/*.js",
+      "require": "./dist/app/tailwind/*.js"
+    },
+    "./iconify/upload": {
+      "types": "./dist/app/iconify/server/upload.d.ts",
+      "import": "./dist/app/iconify/server/upload.js"
+    },
+    "./fonts/*": "./dist/assets/fonts/*",
+    "./icons/*": "./dist/assets/icons/*",
+    "./images/*": "./dist/assets/images/*",
+    "./styles/*": "./dist/assets/styles/*"
+  },
+  "typesVersions": {
+    ">4.0": {
+      "tailwind": [
+        "./dist/app/tailwind/index.d.ts"
+      ],
+      "tailwind/*": [
+        "./dist/app/tailwind/*.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist",
+    "!dist/**/*.test.*",
+    "!dist/**/*.spec.*"
+  ],
+  "svelte": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "engines": {
+    "node": ">=16.20.2",
+    "pnpm": "^8.7.0"
+  },
+  "browserslist": [
+    "last 2 version",
+    "not dead"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/daks-dev/svelte",
+    "directory": "packages/sdk"
+  },
+  "author": {
+    "name": "DVA",
+    "email": "mail@daks.dev",
+    "url": "https://daks.dev"
+  },
+  "bugs": "https://github.com/daks-dev/svelte/issues",
+  "homepage": "https://svelte.daks.dev",
+  "keywords": [
+    "svelte",
+    "sveltekit",
+    "tailwindcss",
+    "carousel",
+    "dropdown",
+    "iconify",
+    "imagetools",
+    "footer",
+    "lightbox",
+    "link",
+    "navbar",
+    "select",
+    "slider",
+    "spinner",
+    "vite-plugin",
+    "yandex"
+  ]
+}

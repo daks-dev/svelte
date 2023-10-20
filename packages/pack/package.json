@@ -9,14 +9,15 @@
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "test": "vitest --ui",
     "lint": "prettier --plugin=prettier-plugin-svelte --check . && eslint .",
-    "format": "prettier --plugin=prettier-plugin-svelte --write ."
+    "format": "prettier --plugin=prettier-plugin-svelte --write .",
+    "update": "pnpm up"
   },
   "devDependencies": {
     "@daks.dev/svelte-iconify": "^0.2.8",
     "@daks.dev/svelte-yandex": "^0.2.5",
     "@daks.dev/svelte.kit": "^0.1.6",
     "@daks.dev/vite-imagetools": "^0.2.6",
-    "@sveltejs/kit": "^1.25.0",
+    "@sveltejs/kit": "^1.25.1",
     "@sveltejs/package": "^2.2.2",
     "@vitest/ui": "^0.34.5",
     "dotenv": "^16.3.1",

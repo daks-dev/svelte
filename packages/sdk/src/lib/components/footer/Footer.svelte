@@ -1,0 +1,75 @@
+<script lang="ts">
+  import Nav from '../../ui/navigate/index.js';
+  import twMerge from '../../app/tailwind/tailwind-merge.js';
+  import Link from '../../ui/navigate/Link.svelte';
+  import { sessionTime } from '../../stores/index.js';
+  import type { NavItem } from '../../ui/navigate/index.d.ts';
+
+  let className: ClassName = 'bg-neutral-200/50 dark:bg-gray-800';
+  export { className as class };
+
+  export let copylink: Partial<NavItem> | undefined = undefined;
+  export let links: Partial<NavItem>[] = [];
+
+  const year = new Date().getFullYear();
+  const timer = new Intl.DateTimeFormat('ru', {
+    minute: '2-digit',
+    second: '2-digit'
+  });
+</script>
+
+<footer
+  id="footer"
+  class={twMerge('pb-2 pt-4', className)}>
+  <div
+    class="
+      wrapper
+      text-2xs xs:text-xs flex flex-row
+      items-center justify-between font-mono font-thin leading-loose text-gray-500 sm:text-sm sm:tracking-wide">
+    {#if copylink}
+      <Link
+        class="
+          mr-auto pr-4
+          hover:text-sky-500 dark:hover:text-sky-300"
+        {...Nav.props(copylink)}>
+        <span
+          slot="before"
+          class="inline-flex gap-0.5">
+          <smal>&copy;</smal>
+          {year}
+        </span>
+      </Link>
+    {:else}
+      <Link
+        class="
+          mr-auto pr-4
+          hover:text-sky-500 dark:hover:text-sky-300"
+        label="local:svelte-logo"
+        href="//kit.svelte.dev"
+        size="18">
+        Svelte Kit
+      </Link>
+    {/if}
+
+    <slot />
+
+    {#if links.length}
+      <nav class="mx-4 flex flex-wrap items-center">
+        {#each links as link}
+          <Link
+            class="
+              page:text-cyan-700
+              step:text-slate-800
+              dark:step:text-slate-300 px-4
+              text-right hover:text-sky-500 dark:hover:text-sky-300"
+            {...Nav.props(link)}
+            size="18" />
+        {/each}
+      </nav>
+    {/if}
+
+    <div class="pl-4 text-slate-400">
+      {timer.format($sessionTime)}
+    </div>
+  </div>
+</footer>
