@@ -1,5 +1,5 @@
 <script lang="ts">
-  import twMerge from '../../app/tailwind/tailwind-merge.js';
+  import twMerge from '../../assets/tailwind/tailwind-merge.js';
   import { timer, timerFormat as format } from '../../stores/persistent.js';
 
   let className: ClassName = undefined;

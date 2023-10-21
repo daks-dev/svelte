@@ -1,7 +1,6 @@
 <script lang="ts">
-  import twMerge from '../../app/tailwind/tailwind-merge.js';
+  import twMerge from '../../assets/tailwind/tailwind-merge.js';
   import placeholder from '../../assets/images/placeholder.js';
-  import type { Custom, Loaded } from './index.d.ts';
 
   export let data: unknown;
   const { src, width, height, title, subtitle, description } = data as ImageMetainfo;
@@ -10,16 +9,17 @@
   let className: ClassName = undefined;
   export { className as class };
 
-  export let custom: Custom = {};
+  export let custom: Record<string, ClassName> = {};
 
   let space: undefined | number = undefined;
   export { space as width };
 
-  export let nativ = false;
-  export let loaded: Loaded = undefined;
-  const handleLoad = nativ && loaded ? (ev: Event) => loaded?.call(ev) : undefined;
+  export let native = false;
+  export let loaded: ((x?: Event | HTMLElement) => void) | undefined = undefined;
 
-  export let alt = caption?.toLowerCase() || '';
+  const handleLoad = native && loaded ? (ev: Event) => loaded?.call(ev) : undefined;
+
+  export let alt = caption ? caption.toLowerCase() : '';
 </script>
 
 <figure
@@ -28,13 +28,13 @@
   <img
     on:load={handleLoad}
     class={twMerge(
-      !nativ && 'bg-20% bg-loading bg-center bg-no-repeat',
+      !native && 'bg-20% bg-loading bg-center bg-no-repeat',
       'bg-neutral-300',
       custom.image
     )}
-    class:lazy={!nativ}
-    src={nativ ? src : placeholder}
-    data-src={nativ ? undefined : src}
+    class:lazy={!native}
+    src={native ? src : placeholder}
+    data-src={native ? undefined : src}
     {width}
     {height}
     {alt}
@@ -43,13 +43,13 @@
   {#if caption}
     <figcaption class={twMerge('flex flex-col', custom.caption)}>
       {#if title}
-        <span class="font-semibold">{@html title}</span>
+        <span class={twMerge('font-semibold', custom.title)}>{@html title}</span>
       {/if}
       {#if subtitle}
-        <span>{@html subtitle}</span>
+        <span class={twMerge(custom.subtitle)}>{@html subtitle}</span>
       {/if}
       {#if description}
-        <small>{@html description}</small>
+        <small class={twMerge(custom.description)}>{@html description}</small>
       {/if}
     </figcaption>
   {/if}

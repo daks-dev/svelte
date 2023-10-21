@@ -1,2 +1,1 @@
-import { default as IconifyAdmin } from './IconifyAdmin.svelte';
-export default IconifyAdmin;
+export { default as IconifyAdmin } from './IconifyAdmin.svelte';

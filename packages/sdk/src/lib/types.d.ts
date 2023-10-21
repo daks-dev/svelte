@@ -14,7 +14,7 @@ declare interface ImageMetadata {
   src: string;
   width: number;
   height: number;
-  format: 'heic' | 'heif' | 'avif' | 'jpeg' | 'jpg' | 'png' | 'tiff' | 'webp' | 'gif' | 'svg';
+  format?: 'heic' | 'heif' | 'avif' | 'jpeg' | 'jpg' | 'png' | 'tiff' | 'webp' | 'gif' | 'svg';
   orientation?: number;
 }
 
@@ -42,12 +42,3 @@ declare namespace App {
     export default value;
   }
 }
-
-/*
-declare global {
-  import type { ILazyLoadInstance } from 'vanilla-lazyload';
-  interface Document {
-    lazyload: ILazyLoadInstance;
-  }
-}
-*/

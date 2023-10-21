@@ -1,2 +1,1 @@
-import Swiping from './Swiping.svelte';
-export default Swiping;
+export { default as Swiping } from './Swiping.svelte';

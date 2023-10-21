@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import Figure from '../../ui/figure/Figure.svelte';
-  import twMerge from '../../app/tailwind/tailwind-merge.js';
+  import twMerge from '../../assets/tailwind/tailwind-merge.js';
   import type { Custom } from './index.d.ts';
 
   let className: ClassName = undefined;
@@ -12,9 +12,9 @@
 
   export let dataset: ImageMetadata[];
 
-  export let nativ = false;
+  export let native = false;
 
-  if (!nativ) onMount(() => document?.lazyload.update());
+  if (!native) onMount(() => document?.lazyload.update());
 </script>
 
 <div class={twMerge(className)}>
@@ -23,8 +23,8 @@
       {data}
       class={twMerge('flex flex-col', custom.item)}
       {custom}
-      {nativ} />
-    {#if !nativ}
+      {native} />
+    {#if !native}
       <link
         rel="image"
         href={data.src} />

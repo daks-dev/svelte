@@ -2,7 +2,7 @@
   import { beforeNavigate, afterNavigate } from '$app/navigation';
   import Nav from '../../ui/navigate/Nav.js';
   import Swiping from '../../ui/swiping/Swiping.svelte';
-  import twMerge from '../../app/tailwind/tailwind-merge.js';
+  import twMerge from '../../assets/tailwind/tailwind-merge.js';
   import NavbarMenu from './NavbarMenu.svelte';
   import NavbarWrapper from './NavbarWrapper.svelte';
   import ToggleMenu from './components/ToggleMenu.svelte';

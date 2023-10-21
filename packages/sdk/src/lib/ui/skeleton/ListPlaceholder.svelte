@@ -1,7 +1,7 @@
 <script lang="ts">
   import { BROWSER } from 'esm-env';
   import { onMount } from 'svelte';
-  import twMerge from '../../app/tailwind/tailwind-merge.js';
+  import twMerge from '../../assets/tailwind/tailwind-merge.js';
 
   let className: ClassName = 'max-w-md';
   export { className as class };

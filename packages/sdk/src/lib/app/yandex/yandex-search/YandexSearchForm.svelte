@@ -2,9 +2,9 @@
   import { onMount } from 'svelte';
   import { page } from '$app/stores';
   import { goto } from '$app/navigation';
-  import { beep } from '../../../utils/audio.js';
   import Icon from '../../iconify/Icon.svelte';
-  import twMerge from '../../tailwind/tailwind-merge.js';
+  import { beep } from '../../../utils/audio.js';
+  import twMerge from '../../../assets/tailwind/tailwind-merge.js';
 
   let className: ClassName = undefined;
   export { className as class };

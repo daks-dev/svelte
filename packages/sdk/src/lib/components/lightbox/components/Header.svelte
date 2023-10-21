@@ -1,6 +1,6 @@
 <script lang="ts">
   import { createEventDispatcher } from 'svelte';
-  import twMerge from '../../../app/tailwind/tailwind-merge.js';
+  import twMerge from '../../../assets/tailwind/tailwind-merge.js';
   import type { Custom, Options } from '../index.d.ts';
 
   const dispatch = createEventDispatcher();

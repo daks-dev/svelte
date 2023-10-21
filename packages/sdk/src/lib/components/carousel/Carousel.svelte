@@ -5,7 +5,7 @@
   import Figure from '../../ui/figure/Figure.svelte';
   import lazyload from '../../app/lazyload.js';
   import { swipe, wheel } from '../../utils/index.js';
-  import twMerge from '../../app/tailwind/tailwind-merge.js';
+  import twMerge from '../../assets/tailwind/tailwind-merge.js';
   import ButtonMove from './components/ButtonMove.svelte';
   import ButtonPlay from './components/ButtonPlay.svelte';
   import type { LazyLoad } from '../../app/lazyload.js';
@@ -47,7 +47,7 @@
 
   export let progress = false;
 
-  export let nativ = false;
+  export let native = false;
   export let loaded: Loaded = undefined;
 
   let auto = autoplay;
@@ -120,7 +120,7 @@
   export function start(): void {
     observer ??= new ResizeObserver(resize);
     observer.observe(carousel);
-    if (!nativ)
+    if (!native)
       loader
         ? loader.update()
         : (loader = lazyload({
@@ -187,7 +187,7 @@
             }}
             {width}
             {data}
-            {nativ}
+            {native}
             {loaded} />
         {/each}
         <slot

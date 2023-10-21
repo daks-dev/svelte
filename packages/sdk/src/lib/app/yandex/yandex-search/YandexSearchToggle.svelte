@@ -4,7 +4,7 @@
   import { page } from '$app/stores';
   import { outside, uuid } from '../../../utils/index.js';
   import Icon from '../../iconify/Icon.svelte';
-  import twMerge from '../../../app/tailwind/tailwind-merge.js';
+  import twMerge from '../../../assets/tailwind/tailwind-merge.js';
   import YandexSearchForm from './YandexSearchForm.svelte';
 
   let className: ClassName = undefined;

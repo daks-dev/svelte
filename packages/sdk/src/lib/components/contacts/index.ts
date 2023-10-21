@@ -1,2 +1,1 @@
-import Contacts from './Contacts.svelte';
-export default Contacts;
+export { default as Contacts } from './Contacts.svelte';

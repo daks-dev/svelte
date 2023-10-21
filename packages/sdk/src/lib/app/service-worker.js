@@ -36,7 +36,6 @@ worker.addEventListener('activate', (event) => {
   worker.clients.claim();
 });
 
-// FIXME:
 self.addEventListener('fetch', (event /** @type {FetchEvent} */) => {
   if (event.request.mode !== 'navigate') return;
   else

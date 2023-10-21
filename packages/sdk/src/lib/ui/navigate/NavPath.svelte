@@ -2,7 +2,7 @@
   import { beforeNavigate } from '$app/navigation';
   import Icon from '../../app/iconify/Icon.svelte';
   import { navigate } from '../../stores/index.js';
-  import twMerge from '../../app/tailwind/tailwind-merge.js';
+  import twMerge from '../../assets/tailwind/tailwind-merge.js';
   import Link from '../navigate/Link.svelte';
 
   let className: ClassName = undefined;

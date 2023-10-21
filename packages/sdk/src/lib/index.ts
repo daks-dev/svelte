@@ -2,6 +2,10 @@
 export { default as Async } from './app/async/Async.svelte';
 export { default as Head } from './app/head/Head.svelte';
 
+export { isIcon } from './app/iconify/index.js';
+export { default as IconTest } from './app/iconify/IconTest.svelte';
+export { default as Icon } from './app/iconify/Icon.svelte';
+
 export {
   globDataset,
   globIndex,
@@ -10,14 +14,8 @@ export {
   imagePattern
 } from './app/imagetools/index.js';
 
-export { isIcon } from './app/iconify/index.js';
-export { default as IconTest } from './app/iconify/IconTest.svelte';
-export { default as Icon } from './app/iconify/Icon.svelte';
-
 export type { LazyLoad } from './app/lazyload.js';
 export { default as lazyload } from './app/lazyload.js';
-
-export { default as twMerge, getTwMerge } from './app/tailwind/tailwind-merge.js';
 
 export type { YandexMapInstance } from './app/yandex/yandex-map/index.d.ts';
 export { default as YandexMap } from './app/yandex/yandex-map/YandexMap.svelte';
@@ -29,6 +27,8 @@ export { default as YandexSearchToggle } from './app/yandex/yandex-search/Yandex
 
 // assets
 export { default as placeholder } from './assets/images/placeholder.js';
+
+export { default as twMerge, getTwMerge } from './assets/tailwind/tailwind-merge.js';
 
 // components
 export { default as Carousel } from './components/carousel/Carousel.svelte';
@@ -51,6 +51,8 @@ export { default as LightboxThumbnail } from './components/lightbox/LightboxThum
 
 export { default as Navbar } from './components/navbar/Navbar.svelte';
 export { default as NavbarKit } from './components/navbar/NavbarKit.svelte';
+export { default as NavbarMenu } from './components/navbar/NavbarMenu.svelte';
+export { default as NavbarWrapper } from './components/navbar/NavbarWrapper.svelte';
 
 export { default as SvelteKitCounter } from './components/svelte-kit-counter/SvelteKitCounter.svelte';
 
@@ -92,7 +94,8 @@ export { default as Swiping } from './ui/swiping/Swiping.svelte';
 export { default as Toast } from './ui/toast/Toast.svelte';
 export { default as ToastData } from './ui/toast/ToastData.svelte';
 
-// svelte-core
+// utils
 export * as audio from './utils/audio.js';
-export { default as outside } from './utils/outside.js';
 export * as scroll from './utils/scroll.js';
+
+export { default as outside } from './utils/outside.js';

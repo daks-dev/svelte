@@ -1,5 +1,5 @@
 <script lang="ts">
-  import twMerge from '../../../app/tailwind/tailwind-merge.js';
+  import twMerge from '../../../assets/tailwind/tailwind-merge.js';
   import type { Custom, Status } from '../index.d.ts';
 
   export let title: string;

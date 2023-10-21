@@ -1,2 +1,1 @@
-import Async from './Async.svelte';
-export default Async;
+export { default as Async } from './Async.svelte';

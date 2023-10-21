@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount, setContext } from 'svelte';
   import { writable, type Writable } from 'svelte/store';
-  import twMerge from '../../app/tailwind/tailwind-merge.js';
+  import twMerge from '../../assets/tailwind/tailwind-merge.js';
   import Overlay from './components/Overlay.svelte';
   import Header from './components/Header.svelte';
   import Footer from './components/Footer.svelte';

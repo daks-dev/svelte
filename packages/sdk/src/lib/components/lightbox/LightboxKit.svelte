@@ -1,10 +1,11 @@
 <script lang="ts">
+  import twMerge from '../../assets/tailwind/tailwind-merge.js';
   import Figure from '../../ui/figure/Figure.svelte';
-  import twMerge from '../../app/tailwind/tailwind-merge.js';
-  import Sign, { type SignOptions } from '$lib/ui/sign/index.js';
+  import Sign from '../../ui/sign/Sign.svelte';
   import LightboxList from './LightboxList.svelte';
   import LightboxModal from './LightboxModal.svelte';
   import LightboxThumbnail from './LightboxThumbnail.svelte';
+  import type { SignOptions } from '../../ui/sign/index.d.ts';
   import type { Options, Custom, Loader } from './index.d.ts';
 
   let className: ClassName = undefined;
@@ -13,7 +14,7 @@
   export let sources: ImageMetainfo[];
   export let thumbnails: ImageMetainfo[];
 
-  export let nativ = false;
+  export let native = false;
 
   export let grid = false;
   export let adaptive = false;
@@ -77,7 +78,7 @@
               custom.inner?.caption
             )
           }}
-          {nativ} />
+          {native} />
         <link
           rel="image"
           href={sources[idx].src} />

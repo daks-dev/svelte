@@ -1,7 +1,7 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import Icon, { isIcon } from '../../app/iconify/index.js';
-  import twMerge from '../../app/tailwind/tailwind-merge.js';
+  import twMerge from '../../assets/tailwind/tailwind-merge.js';
   import Link from './Link.svelte';
   import type { NavBrand } from './index.d.ts';
 

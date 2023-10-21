@@ -1,2 +1,1 @@
-import RouteTransition from './RouteTransition.svelte';
-export default RouteTransition;
+export { default as RouteTransition } from './RouteTransition.svelte';

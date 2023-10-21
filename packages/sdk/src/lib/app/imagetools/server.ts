@@ -1,8 +1,8 @@
 import type { Plugin } from 'vite';
-import { imagetools as fn } from 'vite-imagetools';
+import { imagetools as __imagetools } from 'vite-imagetools';
 
-export const imagetools = (format: string | number = 'webp', quality: number = 80) =>
-  fn({
+export const imagetools = (format: string | number = 'webp', quality: number = 80): Plugin =>
+  __imagetools({
     defaultDirectives: (url) => {
       if (typeof format === 'number') {
         quality = format;
@@ -28,6 +28,6 @@ export const imagetools = (format: string | number = 'webp', quality: number = 8
           : undefined
       );
     }
-  }) satisfies Plugin;
+  });
 
 export default imagetools;

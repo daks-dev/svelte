@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import Icon from '../../app/iconify/Icon.svelte';
-  import twMerge from '../../app/tailwind/tailwind-merge.js';
+  import twMerge from '../../assets/tailwind/tailwind-merge.js';
 
   let className: ClassName = undefined;
   export { className as class };
@@ -46,6 +46,6 @@
   aria-labelledby="">
   <Icon
     class="pointer-events-none"
-    icon={icons[dark ? 0 : 1]}
+    icon={icons[dark ? 1 : 0]}
     {size} />
 </button>

@@ -1,6 +1,6 @@
 <script lang="ts">
   import outside from '../../utils/outside.js';
-  import twMerge from '../../app/tailwind/tailwind-merge.js';
+  import twMerge from '../../assets/tailwind/tailwind-merge.js';
 
   let className: ClassName = undefined;
   export { className as class };

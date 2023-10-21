@@ -3,7 +3,7 @@ export interface IconifyBundle {
   icons: Record<string, unknown>;
 }
 
-export const isIcon = (val?: Attribute): boolean => !!val && /^[a-z,-]+:[a-z,-]+$/.test(val);
+export const isIcon = (x: Attribute): boolean => !!x && /^[a-z,-]+:[a-z,-]+$/.test(x);
 
 export { default as IconTest } from './IconTest.svelte';
 

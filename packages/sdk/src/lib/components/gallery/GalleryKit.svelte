@@ -1,5 +1,5 @@
 <script lang="ts">
-  import twMerge from '../../app/tailwind/tailwind-merge.js';
+  import twMerge from '../../assets/tailwind/tailwind-merge.js';
   import Gallery from './Gallery.svelte';
   import type { Custom } from './index.d.ts';
 
@@ -10,7 +10,7 @@
 
   export let dataset: ImageMetadata[] = [];
 
-  export let nativ = false;
+  export let native = false;
 
   export let grid = false;
   export let adaptive = false;
@@ -47,4 +47,4 @@
       (shadow || scale) && (adaptive ? 'mt-4' : 'mt-2')
     )
   }}
-  {nativ} />
+  {native} />

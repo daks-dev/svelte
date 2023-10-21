@@ -1,6 +1,6 @@
 <script lang="ts">
   import Icon from '../../app/iconify/Icon.svelte';
-  import twMerge from '../../app/tailwind/tailwind-merge.js';
+  import twMerge from '../../assets/tailwind/tailwind-merge.js';
 
   let className: ClassName = 'top-2 left-2';
   export { className as class };
@@ -11,9 +11,9 @@
 
   export let small = false;
 
-  export let light = false;
-  export let dark = false;
   export let auto = false;
+  export let dark = false;
+  export let light = false;
 </script>
 
 <Icon

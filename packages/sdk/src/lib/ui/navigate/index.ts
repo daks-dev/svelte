@@ -37,5 +37,10 @@ export interface NavSite {
   allow?: string[];
 }
 
+export { default as Link } from './Link.svelte';
+export { default as NavHome } from './NavHome.svelte';
+export { default as NavPath } from './NavPath.svelte';
+export { default as NavToTop } from './NavToTop.svelte';
+
 import Nav from './Nav.js';
 export default Nav;

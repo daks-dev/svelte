@@ -3,7 +3,7 @@
   import { page } from '$app/stores';
   import Icon, { isIcon } from '../../app/iconify/index.js';
   import Link from '../navigate/Link.svelte';
-  import twMerge from '../../app/tailwind/tailwind-merge.js';
+  import twMerge from '../../assets/tailwind/tailwind-merge.js';
   import { outside, uuid } from '../../utils/index.js';
   import DropdownWrapper from './DropdownWrapper.svelte';
   import type { NavItem } from '../navigate/index.d.ts';

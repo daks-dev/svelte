@@ -1,5 +1,5 @@
 <script lang="ts">
-  import twMerge from '../../app/tailwind/tailwind-merge.js';
+  import twMerge from '../../assets/tailwind/tailwind-merge.js';
   import Carousel from './Carousel.svelte';
   import type { Custom, Loaded } from './index.d.ts';
 
@@ -8,10 +8,6 @@
   export let custom: Partial<Custom> = {};
 
   export let dataset: ImageMetainfo[];
-
-  export let check = false;
-  let checked = 0;
-  const loaded: Loaded = () => checked++;
 
   export let grayscale = false;
   export let invert = false;
@@ -22,12 +18,19 @@
     grayscale && 'grayscale group-hover:grayscale-0',
     invert && 'invert group-hover:invert-0'
   );
+
+  export let native = false;
+
+  export let check = false;
+  let checked = 0;
+  const loaded: Loaded = () => checked++;
 </script>
 
 <Carousel
   class={className}
   {custom}
   {dataset}
+  {native}
   {loaded}
   {...$$restProps}>
   <svelte:fragment slot="check">

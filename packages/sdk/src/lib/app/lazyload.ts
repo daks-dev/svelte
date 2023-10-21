@@ -6,7 +6,9 @@ declare global {
   }
 }
 
-function lazyload(
+export type { ILazyLoadInstance as LazyLoad };
+
+export function lazyload(
   options?: ILazyLoadOptions,
   elements?: NodeListOf<HTMLElement>
 ): ILazyLoadInstance {
@@ -29,7 +31,5 @@ function lazyload(
     elements
   );
 }
-
-export type { ILazyLoadInstance as LazyLoad };
 
 export default lazyload;

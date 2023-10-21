@@ -2,7 +2,7 @@
   import { createEventDispatcher, onMount, onDestroy } from 'svelte';
   import { fade } from 'svelte/transition';
   import { swipe, wheel } from '../../../utils/index.js';
-  import twMerge from '../../../app/tailwind/tailwind-merge.js';
+  import twMerge from '../../../assets/tailwind/tailwind-merge.js';
   import type { Custom, Options } from '../index.d.ts';
 
   const dispatch = createEventDispatcher();
