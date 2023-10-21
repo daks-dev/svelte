@@ -1,10 +1,11 @@
 <script lang="ts">
   import { BROWSER } from 'esm-env';
   import { onMount } from 'svelte';
+  import twMerge from '../../../assets/tailwind/tailwind-merge.js';
   import { uuid } from '../../../utils/index.js';
   import type { YandexMapInstance } from './index.d.ts';
 
-  let className: string | undefined = undefined;
+  let className: ClassName = undefined;
   export { className as class };
 
   export let data: {
@@ -84,6 +85,6 @@
   on:touchstart|passive|stopPropagation
   on:touchend|passive|stopPropagation
   {id}
-  class={className}
+  class={twMerge(className)}
   role="button"
   tabindex="-1" />

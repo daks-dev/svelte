@@ -101,7 +101,7 @@
   "typesVersions": {
     ">4.0": {
       "tailwind/*": [
-        "./dist/app/tailwind/*.d.ts"
+        "./dist/assets/tailwind/*.d.ts"
       ]
     }
   },

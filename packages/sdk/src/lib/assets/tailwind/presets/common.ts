@@ -69,6 +69,10 @@ export default {
         circle: 'circle',
         square: 'square'
       },
+      backgroundImage: {
+        waiting: 'url(@daks.dev/svelte.sdk/icons/spinners/clock.svg)',
+        loading: 'url(@daks.dev/svelte.sdk/icons/spinners/90-ring-bg.svg)'
+      },
       spacing: {
         inherit: 'inherit'
       },

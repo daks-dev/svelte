@@ -1,5 +1,5 @@
 /// <reference types="@sveltejs/kit" />
-/// <reference types="./imagetools/types" />
+/// <reference types="./app/imagetools/types" />
 
 declare type Meta = string | number | boolean | null | undefined;
 declare interface Metadata {
