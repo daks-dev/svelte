@@ -60,7 +60,7 @@
     "tailwindcss/classnames-order": [
       "warn",
       {
-        // "removeDuplicates": true
+        "removeDuplicates": true,
         // "skipClassAttribute": <boolean>,
         // "tags": Array<string>,
         "callees": ["tailwind-merge", "classnames", "clsx", "ctl", "cva", "tv"],
@@ -68,5 +68,15 @@
       }
     ]
   },
-  "ignorePatterns": ["**/.svelte-kit/", "**/.master/", "**/.vscode/", "**/build/", "**/dist/"]
+  "ignorePatterns": [
+    "**/.svelte-kit/",
+    "**/build/",
+    "**/dist/",
+    "**/dist-ssr/",
+
+    "**/static",
+
+    "**/.master/",
+    "**/.vscode/"
+  ]
 }
