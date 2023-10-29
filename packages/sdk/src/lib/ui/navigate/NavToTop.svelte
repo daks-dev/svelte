@@ -38,9 +38,8 @@
       className
     )}
     style:transition-duration={`${duration}ms`}
-    aria-label={label}
-    aria-hidden="true">
-    <span class="sr-only">{label}</span>
+    aria-label={label}>
+    <span class="sr-only">{@html label}</span>
     <Icon
       class="pointer-events-none"
       icon="mdi:transfer-up"

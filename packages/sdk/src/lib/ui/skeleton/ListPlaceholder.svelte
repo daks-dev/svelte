@@ -14,14 +14,14 @@
 
 {#if visible}
   <div
+    role="status"
     class={twMerge(
       'space-y-4 rounded p-5',
       'divide-y divide-current border border-current shadow',
       animate,
       className
     )}
-    aria-hidden="true"
-    role="status">
+    aria-hidden="true">
     {#each Array(5) as idx}
       <div
         class="flex items-center justify-between pt-4 first:pt-0"
@@ -33,6 +33,6 @@
         <div class="h-2.5 w-12 rounded-full bg-current opacity-70" />
       </div>
     {/each}
-    <span class="sr-only">Loading...</span>
+    <span class="sr-only">...loading...</span>
   </div>
 {/if}

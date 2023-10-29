@@ -16,13 +16,13 @@
 
 {#if visible}
   <div
+    role="status"
     class={twMerge(
       'space-y-8 md:flex md:items-center md:space-x-8 md:space-y-0',
       animate,
       className
     )}
-    aria-hidden="true"
-    role="status">
+    aria-hidden="true">
     <div
       class="
         relative flex
@@ -45,6 +45,6 @@
       <div class="col-span-7 h-2 rounded bg-current" />
       <div class="col-span-5 h-2 rounded bg-current" />
     </div>
-    <span class="sr-only">Loading...</span>
+    <span class="sr-only">...loading...</span>
   </div>
 {/if}

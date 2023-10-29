@@ -17,9 +17,8 @@
   class={twMerge(className)}
   aria-label="toggle menu"
   aria-expanded={!hidden}
-  aria-controls="navbar-menu"
-  aria-hidden="true">
-  <span class="sr-only">{label}</span>
+  aria-controls="navbar-menu">
+  <span class="sr-only">{@html label}</span>
   <Icon
     class="pointer-events-none"
     icon="ic:round-menu"

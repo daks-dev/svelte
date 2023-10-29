@@ -14,9 +14,9 @@
 
 {#if visible}
   <div
+    role="status"
     class={twMerge('grid grid-cols-10 items-center justify-center gap-y-2.5', animate, className)}
-    aria-hidden="true"
-    role="status">
+    aria-hidden="true">
     <div class="col-span-full h-2.5 rounded-full bg-current" />
     <div class="col-span-8 col-start-2 h-2.5 rounded-full bg-current" />
     <div class="col-span-full mt-1.5 flex items-center justify-center">
@@ -32,6 +32,6 @@
       <div class="mr-3 h-2.5 w-20 rounded-full bg-current" />
       <div class="h-2 w-24 rounded bg-current opacity-50" />
     </div>
-    <span class="sr-only">Loading...</span>
+    <span class="sr-only">...loading...</span>
   </div>
 {/if}

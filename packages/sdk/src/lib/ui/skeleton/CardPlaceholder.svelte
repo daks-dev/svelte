@@ -16,9 +16,9 @@
 
 {#if visible}
   <div
+    role="status"
     class={twMerge('space-y-2.5 rounded border border-current p-5 shadow', animate, className)}
-    aria-hidden="true"
-    role="status">
+    aria-hidden="true">
     <slot />
     <div
       class="
@@ -53,6 +53,6 @@
         <div class="h-2 w-48 rounded-full bg-current" />
       </div>
     </div>
-    <span class="sr-only">Loading...</span>
+    <span class="sr-only">...loading...</span>
   </div>
 {/if}

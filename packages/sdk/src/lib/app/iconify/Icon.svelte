@@ -48,7 +48,7 @@
       {rotate}
       {color}
       aria-label={label}
-      aria-hidden={hidden}
+      aria-hidden="true"
       {role} />
   {/key}
 {:else}

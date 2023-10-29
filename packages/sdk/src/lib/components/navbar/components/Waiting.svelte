@@ -12,8 +12,7 @@
 <div
   class={twMerge(className)}
   class:invisible={!disabled}
-  aria-label="waiting"
-  aria-hidden>
+  aria-label="waiting">
   <Icon
     icon="svg-spinners:8-dots-rotate"
     {size} />

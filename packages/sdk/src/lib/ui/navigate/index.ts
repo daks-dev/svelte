@@ -1,9 +1,10 @@
 export interface NavBrand {
+  custom: Record<string, ClassName>;
+  label: string;
   home: string;
   page: string;
   alt: string;
   size: number | string;
-  custom: Record<string, ClassName>;
 }
 
 export interface NavItem {
