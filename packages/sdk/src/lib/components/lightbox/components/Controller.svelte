@@ -49,7 +49,6 @@
 {#if $countItemsStore > 1}
   <Button
     on:click={previous}
-    next={false}
     {options}
     activeItem={$activeItemStore}
     countItems={$countItemsStore} />

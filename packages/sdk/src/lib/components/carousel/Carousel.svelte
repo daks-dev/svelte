@@ -152,7 +152,7 @@
 
 <svelte:window bind:innerWidth />
 
-<div class={twMerge(className)}>
+<div class={twMerge('linecap-round linejoin-round vector-non-scaling-stroke', className)}>
   <div class="relative w-full">
     <div
       bind:this={carousel}
@@ -176,6 +176,7 @@
         {#each dataset as data}
           <Figure
             class={custom.item}
+            style="width:{width}px"
             custom={{
               image: twMerge(
                 'w-full max-w-full',
@@ -185,7 +186,6 @@
               ),
               caption: custom.inner?.caption
             }}
-            {width}
             {data}
             {native}
             {loaded} />

@@ -5,7 +5,7 @@ import { imagetools } from './src/lib/app/imagetools/server.js';
 import { yaml } from './src/lib/app/vite/plugin-yaml.js';
 
 export default defineConfig({
-  logLevel: 'error', // 'info'
+  logLevel: 'info', // error
   plugins: [imagetools(), yaml(), sveltekit()],
   server: { fs: { strict: false } },
   // build: { target: 'esnext' },

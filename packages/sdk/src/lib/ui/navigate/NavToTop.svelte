@@ -8,6 +8,8 @@
   let className: ClassName = undefined;
   export { className as class };
 
+  export let label = 'to top';
+
   export let scrolled: boolean;
   export let size: number | string = '1.75em';
   export let duration = 300;
@@ -35,7 +37,10 @@
       'transition ease-in-out',
       className
     )}
-    style:transition-duration={`${duration}ms`}>
+    style:transition-duration={`${duration}ms`}
+    aria-label={label}
+    aria-hidden="true">
+    <span class="sr-only">{label}</span>
     <Icon
       class="pointer-events-none"
       icon="mdi:transfer-up"

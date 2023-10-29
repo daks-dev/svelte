@@ -21,6 +21,7 @@
 <!-- style:transform-origin={origin} -->
 <div
   {id}
+  role="menu"
   class={twMerge(
     'absolute flex w-max min-w-full flex-col overflow-hidden',
     'aria-hidden:disabled aria-hidden:scale-75 aria-hidden:opacity-0',
@@ -31,16 +32,16 @@
   class:bottom-full={origin.includes('bottom')}
   style:transition-duration={`${duration}ms`}
   aria-orientation="vertical"
-  aria-hidden={hidden}
-  tabindex={hidden ? -1 : undefined}
-  role="menu">
+  aria-hidden={hidden}>
   {#if items}
     {#each items as item}
       <Link
         on:click={item.handle}
+        role="menuitem"
         class={twMerge('flex w-full items-center', classLink)}
         {base}
-        {...item} />
+        {...item}
+        tabindex={hidden ? -1 : undefined} />
     {/each}
   {:else}
     <slot />

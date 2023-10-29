@@ -59,7 +59,7 @@
   on:click={close}
   on:keydown={handleKey}
   role="button"
-  tabindex="-1"
+  tabindex="0"
   class={twMerge('relative', inline ? 'inline-flex' : 'flex', classWrapper)}>
   <Link
     on:click={handleClick}

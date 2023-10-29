@@ -5,6 +5,8 @@
   let className: ClassName = undefined;
   export { className as class };
 
+  export let label = 'toggle menu';
+
   export let hidden: boolean;
   export let toggle: () => void;
   export let size: number | string = '1.75em';
@@ -15,7 +17,9 @@
   class={twMerge(className)}
   aria-label="toggle menu"
   aria-expanded={!hidden}
-  aria-controls="navbar-menu">
+  aria-controls="navbar-menu"
+  aria-hidden="true">
+  <span class="sr-only">{label}</span>
   <Icon
     class="pointer-events-none"
     icon="ic:round-menu"

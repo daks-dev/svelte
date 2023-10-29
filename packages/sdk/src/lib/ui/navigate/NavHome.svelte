@@ -17,7 +17,9 @@
 
 <Link
   class={twMerge(className, brand.custom?.link)}
-  href="/">
+  href="/"
+  aria-hidden="true">
+  <span class="sr-only">home page</span>
   {#if $page.url.pathname === '/'}
     {#if brand.home}
       {#if isIcon(brand.home)}

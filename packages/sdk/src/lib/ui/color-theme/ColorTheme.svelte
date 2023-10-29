@@ -6,6 +6,8 @@
   let className: ClassName = undefined;
   export { className as class };
 
+  export let label = 'color theme';
+
   export let icons = [
     // 'ic:twotone-dark-mode', 'ic:twotone-light-mode'
     'line-md:sunny-outline-to-moon-loop-transition',
@@ -41,9 +43,9 @@
   on:click={toggle}
   class={twMerge(className)}
   type="button"
-  aria-haspopup="true"
-  aria-expanded="false"
-  aria-labelledby="">
+  aria-label="label"
+  aria-hidden="true">
+  <span class="sr-only">{label}</span>
   <Icon
     class="pointer-events-none"
     icon={icons[dark ? 1 : 0]}
