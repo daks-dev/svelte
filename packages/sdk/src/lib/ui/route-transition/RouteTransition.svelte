@@ -2,7 +2,7 @@
   import { blur, fly } from 'svelte/transition';
   import { sineIn, sineOut } from 'svelte/easing';
   import { navigating } from '$app/stores';
-  import twMerge from '../../assets/tailwind/tailwind-merge.js';
+  import twMerge from '../../tailwind/tailwind-merge.js';
   import { routeTransitionMode } from '$lib/stores/index.js';
 
   let className: ClassName = undefined;

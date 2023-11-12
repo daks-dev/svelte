@@ -1,5 +1,5 @@
 import { getDefaultConfig, mergeConfigs, extendTailwindMerge, type Config } from 'tailwind-merge';
-import { twmerge as external } from '../../stores/nano.js';
+import { twmerge as external } from '../stores/nano.js';
 
 export const getTwClassGroup = (key?: string): void => {
   const config: Config = getDefaultConfig();
@@ -8,11 +8,16 @@ export const getTwClassGroup = (key?: string): void => {
 
 const local = {
   aspect: [{ aspect: ['3/4', '4/3', 'A4', 'A4l'] }],
-  'bg-image': [{ bg: ['waiting', 'loading'] }],
+  'bg-image': [{ bg: ['linear', 'radial', 'loading', 'waiting'] }],
   'bg-size': [{ bg: ['75%', '50%', '33%', '25%', '20%', '10%', '5%'] }],
   content: [{ content: ['null'] }],
   'font-size': [{ text: ['3xs', '2xs', '1.5xl', '2.5xl', '3.5xl', '4.5xl'] }],
-  'list-style-type': [{ list: ['circle', 'square'] }]
+  'gradient-from-pos': [{ from: ['150%'] }],
+  'gradient-to-pos': [{ to: ['150%'] }],
+  'gradient-via-pos': [{ via: ['150%'] }],
+  'list-style-type': [{ list: ['circle', 'square'] }],
+  rounded: [{ rounded: ['4xl', '5xl'] }],
+  shadow: [{ shadow: ['inset'] }]
 };
 
 // const external = $twmerge;

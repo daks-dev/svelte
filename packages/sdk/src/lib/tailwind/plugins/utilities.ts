@@ -1,5 +1,5 @@
-// import defaultTheme from 'tailwindcss/defaultTheme';
-// import colors from 'tailwindcss/colors';
+// import defaultTheme from 'tailwindcss/defaultTheme.js';
+// import colors from 'tailwindcss/colors.js';
 import plugin from 'tailwindcss/plugin.js';
 
 export default plugin(({ addUtilities }) => {

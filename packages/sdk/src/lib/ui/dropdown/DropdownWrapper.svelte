@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { NavItem } from '../navigate/index.d.ts';
   import Link from '../navigate/Link.svelte';
-  import twMerge from '../../assets/tailwind/tailwind-merge.js';
+  import twMerge from '../../tailwind/tailwind-merge.js';
 
   let classWrapper: ClassName =
     'z-10 bg-neutral-50/95 dark:bg-slate-700/95 rounded-md drop-shadow-md';

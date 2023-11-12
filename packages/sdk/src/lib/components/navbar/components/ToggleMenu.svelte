@@ -1,6 +1,6 @@
 <script lang="ts">
   import Icon from '../../../app/iconify/Icon.svelte';
-  import twMerge from '../../../assets/tailwind/tailwind-merge.js';
+  import twMerge from '../../../tailwind/tailwind-merge.js';
 
   let className: ClassName = undefined;
   export { className as class };

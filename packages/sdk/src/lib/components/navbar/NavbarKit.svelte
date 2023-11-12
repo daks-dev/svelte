@@ -1,6 +1,6 @@
 <script lang="ts">
   import Nav from '../../ui/navigate/Nav.js';
-  import twMerge from '../../assets/tailwind/tailwind-merge.js';
+  import twMerge from '../../tailwind/tailwind-merge.js';
   import NavHome from '../../ui/navigate/NavHome.svelte';
   import NavToTop from '../../ui/navigate/NavToTop.svelte';
   import ColorTheme from '../../ui/color-theme/ColorTheme.svelte';
@@ -65,8 +65,7 @@
     let:close>
     <NavHome
       class={twMerge('mr-4', custom.button)}
-      {brand}
-      {size} />
+      {brand} />
 
     <slot
       name="before"

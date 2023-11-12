@@ -1,5 +1,5 @@
 <script lang="ts">
-  import twMerge from '../../assets/tailwind/tailwind-merge.js';
+  import twMerge from '../../tailwind/tailwind-merge.js';
   import placeholder from '../../assets/images/placeholder.js';
 
   export let data: unknown;

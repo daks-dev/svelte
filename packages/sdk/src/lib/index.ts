@@ -28,8 +28,6 @@ export { default as YandexSearchToggle } from './app/yandex/yandex-search/Yandex
 // assets
 export { default as placeholder } from './assets/images/placeholder.js';
 
-export { default as twMerge, getTwMerge } from './assets/tailwind/tailwind-merge.js';
-
 // components
 export { default as Carousel } from './components/carousel/Carousel.svelte';
 export { default as CarouselKit } from './components/carousel/CarouselKit.svelte';
@@ -55,6 +53,10 @@ export { default as NavbarMenu } from './components/navbar/NavbarMenu.svelte';
 export { default as NavbarWrapper } from './components/navbar/NavbarWrapper.svelte';
 
 export { default as SvelteKitCounter } from './components/svelte-kit-counter/SvelteKitCounter.svelte';
+
+// tailwind
+
+export { default as twMerge, getTwMerge } from './tailwind/tailwind-merge.js';
 
 // ui
 export { default as ColorTheme } from './ui/color-theme/ColorTheme.svelte';

@@ -1,4 +1,4 @@
-import common from './src/lib/assets/tailwind/presets/common';
+import common from './src/lib/tailwind/presets/common';
 import type { Config } from 'tailwindcss';
 
 export default {

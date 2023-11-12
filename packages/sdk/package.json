@@ -17,34 +17,34 @@
     "@iconify/svelte": "^3.1.4",
     "@nanostores/persistent": "^0.9.1",
     "@rollup/pluginutils": "^5.0.5",
-    "@sveltejs/kit": "^1.27.1",
+    "@sveltejs/kit": "^1.27.5",
     "@sveltejs/package": "^2.2.2",
-    "@types/cookie": "^0.5.3",
-    "@types/html-minifier-terser": "^7.0.1",
-    "@types/js-yaml": "^4.0.8",
-    "@types/node": "^20.8.9",
+    "@types/cookie": "^0.5.4",
+    "@types/html-minifier-terser": "^7.0.2",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^20.9.0",
     "@vitest/ui": "^0.34.6",
     "cookie": "^0.5.0",
     "esm-env": "^1.0.0",
     "html-minifier-terser": "^7.2.0",
     "iconify-icon": "^1.0.8",
     "js-yaml": "^4.1.0",
-    "nanostores": "^0.9.4",
+    "nanostores": "^0.9.5",
     "publint": "^0.2.5",
-    "svelte": "^4.2.2",
-    "svelte-check": "^3.5.2",
+    "svelte": "^4.2.3",
+    "svelte-check": "^3.6.0",
     "tailwind-merge": "^1.14.0",
     "tailwindcss": "^3.3.5",
     "tslib": "^2.6.2",
     "typescript": "^5.2.2",
     "vanilla-lazyload": "^17.8.5",
     "vite": "^4.5.0",
-    "vite-imagetools": "^6.1.0",
+    "vite-imagetools": "^6.2.3",
     "vitest": "^0.34.6"
   },
   "peerDependencies": {
-    "@sveltejs/kit": "^1.27.1",
-    "svelte": "^4.2.2"
+    "@sveltejs/kit": "^1.27.5",
+    "svelte": "^4.2.3"
   },
   "exports": {
     "./package.json": "./package.json",
@@ -89,11 +89,11 @@
       "import": "./dist/app/iconify/server/upload.js"
     },
     "./tailwind/*": {
-      "types": "./dist/assets/tailwind/*.d.ts",
-      "import": "./dist/assets/tailwind/*.js",
-      "require": "./dist/assets/tailwind/*.js"
+      "types": "./dist/tailwind/*.d.ts",
+      "import": "./dist/tailwind/*.js",
+      "require": "./dist/tailwind/*.js"
     },
-    "./tailwind": "./dist/assets/tailwind/index.css",
+    "./tailwind": "./dist/tailwind/index.css",
     "./fonts/*": "./dist/assets/fonts/*",
     "./icons/*": "./dist/assets/icons/*",
     "./images/*": "./dist/assets/images/*",
@@ -102,7 +102,7 @@
   "typesVersions": {
     ">4.0": {
       "tailwind/*": [
-        "./dist/assets/tailwind/*.d.ts"
+        "./dist/tailwind/*.d.ts"
       ]
     }
   },

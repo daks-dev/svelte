@@ -24,7 +24,7 @@
 
   export let role: undefined | string = 'image';
   export let label: undefined | string = undefined;
-  export let hidden: undefined | boolean = undefined;
+  // export let hidden: undefined | boolean = undefined;
 
   let visible = false;
 

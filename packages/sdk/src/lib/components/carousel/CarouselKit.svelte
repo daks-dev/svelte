@@ -1,5 +1,5 @@
 <script lang="ts">
-  import twMerge from '../../assets/tailwind/tailwind-merge.js';
+  import twMerge from '../../tailwind/tailwind-merge.js';
   import Carousel from './Carousel.svelte';
   import type { Custom, Loaded } from './index.d.ts';
 
