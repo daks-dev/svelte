@@ -24,7 +24,7 @@
   role="menu"
   class={twMerge(
     'absolute flex w-max min-w-full flex-col overflow-hidden',
-    'aria-hidden:disabled aria-hidden:scale-75 aria-hidden:opacity-0',
+    'aria-hidden:scale-75 aria-hidden:opacity-0 aria-hidden:disabled',
     'transition-all ease-in-out',
     classWrapper
   )}

@@ -81,7 +81,7 @@
       'fixed z-20',
       top ? 'top-16' : center ? 'top-1/2 -translate-y-1/2' : 'bottom-16',
       right ? 'right-8' : left ? 'left-8' : 'left-1/2 -translate-x-1/2',
-      'xs:max-w-sm w-max max-w-xs px-2 py-4 sm:max-w-md md:max-w-lg lg:max-w-xl',
+      'w-max max-w-xs px-2 py-4 xs:max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl',
       'text-sm text-white',
       'rounded border border-slate-400 bg-slate-500/95',
       'shadow-md shadow-gray-700 dark:shadow-black',
@@ -91,6 +91,6 @@
       <slot {touch} />
     </div>
     <span class="absolute right-3 top-1">&times;</span>
-    <span class="text-2xs absolute bottom-1 right-3">00:{timer?.toString().padStart(2, '0')}</span>
+    <span class="absolute bottom-1 right-3 text-2xs">00:{timer?.toString().padStart(2, '0')}</span>
   </div>
 {/if}

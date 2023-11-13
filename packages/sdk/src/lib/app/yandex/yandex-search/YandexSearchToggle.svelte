@@ -69,7 +69,7 @@
     out:fly={options}
     class={twMerge(
       'absolute left-1/2 top-full z-40 -translate-x-1/2',
-      'xs:max-w-md mt-4 w-full max-w-xs px-4 py-8 sm:max-w-xl sm:px-8 lg:max-w-3xl',
+      'mt-4 w-full max-w-xs px-4 py-8 xs:max-w-md sm:max-w-xl sm:px-8 lg:max-w-3xl',
       classModal
     )}
     {id}>

@@ -14,7 +14,7 @@
   "vueIndentScriptAndStyle": false,
   "embeddedLanguageFormatting": "auto",
   "tailwindConfig": "./tailwind.config.ts",
-  "tailwindAttributes": ["class", "class:list", "custom", "className", "ngClass"],
+  "tailwindAttributes": ["class", "custom", "className", "ngClass"],
   "tailwindFunctions": ["twMerge", "classnames", "clsx", "ctl"],
   "plugins": ["prettier-plugin-svelte", "prettier-plugin-tailwindcss"],
   "overrides": [

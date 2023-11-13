@@ -22,7 +22,7 @@
   id="navbar"
   class={twMerge(
     'fixed left-0 top-0 z-10 w-full',
-    'vector-non-scaling-stroke text-lg',
+    'text-lg vector-non-scaling-stroke',
     'origin-top transition-colors ease-in-out',
     'overflow--offset',
     className

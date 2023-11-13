@@ -33,7 +33,7 @@
     item: twMerge(custom.item, centered && 'items-center'),
     image: twMerge(
       custom.image,
-      adaptive && 'w-full max-w-full h-auto object-contain',
+      adaptive && 'h-auto w-full max-w-full object-contain',
       rounded && 'rounded',
       shadow && 'drop-shadow-deep hover:drop-shadow-md',
       scale && 'hover:scale-105',

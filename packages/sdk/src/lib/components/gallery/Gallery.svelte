@@ -8,7 +8,7 @@
   export { className as class };
 
   export let custom: Partial<Custom> = {};
-  custom.caption = twMerge('pt-2 flex flex-col', custom.caption);
+  custom.caption = twMerge('flex flex-col pt-2', custom.caption);
 
   export let dataset: ImageMetadata[];
 

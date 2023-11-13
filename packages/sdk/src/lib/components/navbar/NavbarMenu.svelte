@@ -16,14 +16,14 @@
 <nav
   id="navbar-menu"
   class={twMerge(
-    '-lg:mt-1 absolute left-0 top-full z-0 ml-1 lg:static lg:ml-4',
-    // 'grid grid-cols-1 lg:auto-cols-max lg:grid-flow-col lg:gap-x-3 2xl:gap-x-5',
-    'flex flex-col lg:flex-row lg:flex-nowrap lg:gap-x-3 2xl:gap-x-5',
-    'max-w-xs sm:max-w-md lg:max-w-none',
+    'absolute left-0 top-full z-0 ml-1 -bp:mt-1 bp:static bp:ml-4',
+    // 'grid grid-cols-1 bp:auto-cols-max bp:grid-flow-col lg:gap-x-3 2xl:gap-x-5',
+    'flex flex-col lg:gap-x-3 bp:flex-row bp:flex-nowrap 2xl:gap-x-5',
+    'max-w-xs sm:max-w-md bp:max-w-none',
     'font-normal uppercase tracking-wide',
-    '-lg:rounded-md -lg:drop-shadow-md',
-    '-lg:aria-hidden:opacity-0 -lg:aria-hidden:scale-75 -lg:aria-hidden:disabled',
-    'origin-top-left transition ease-in-out',
+    '-bp:rounded-md -bp:drop-shadow-md',
+    '-bp:aria-hidden:scale-75 -bp:aria-hidden:opacity-0 -bp:aria-hidden:disabled',
+    'origin-top-left onload:transition',
     // 'first:rounded-t-md last:rounded-b-md',
     className
   )}

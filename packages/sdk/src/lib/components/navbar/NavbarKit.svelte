@@ -20,10 +20,10 @@
     {
       menu: `
         text-slate-500 dark:text-slate-400 onscroll:text-slate-500
-        -lg:bg-neutral-50/95 -lg:dark:bg-slate-700/95`,
+        -bp:bg-neutral-50/95 -bp:dark:bg-slate-700/95`,
       link: `
         hover:text-sky-500 dark:hover:text-sky-300
-        hover:bg-gray-500/50 lg:hover:bg-transparent
+        hover:bg-gray-500/50 bp:hover:bg-transparent
         page:text-cyan-700 step:text-slate-800 dark:step:text-slate-300`,
       button: `
         p-2
@@ -85,7 +85,7 @@
       {custom} />
 
     <ColorTheme
-      class={twMerge('ml-4', centered ? 'lg:ml-auto' : 'lg:ml-8', custom.button)}
+      class={twMerge('ml-4', centered ? 'bp:ml-auto' : 'bp:ml-8', custom.button)}
       {size} />
 
     <YandexSearchToggle

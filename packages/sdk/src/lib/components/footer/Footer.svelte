@@ -20,12 +20,12 @@
 
 <footer
   id="footer"
-  class={twMerge('pb-2 pt-4', className)}>
+  class={twMerge('py-4', className)}>
   <div
     class="
       wrapper
-      text-2xs xs:text-xs flex flex-row
-      items-center justify-between font-mono font-thin leading-loose text-gray-500 sm:text-sm sm:tracking-wide">
+      flex flex-row items-center justify-between
+      font-mono text-2xs font-thin leading-loose text-gray-500 xs:text-xs sm:text-sm sm:tracking-wide">
     {#if copylink}
       <Link
         class="
@@ -58,10 +58,10 @@
         {#each links as link}
           <Link
             class="
-              page:text-cyan-700
-              step:text-slate-800
-              dark:step:text-slate-300 px-4
-              text-right hover:text-sky-500 dark:hover:text-sky-300"
+              px-4
+              text-right
+              hover:text-sky-500 step:text-slate-800
+              page:text-cyan-700 dark:hover:text-sky-300 dark:step:text-slate-300"
             {...Nav.props(link)}
             size="18" />
         {/each}

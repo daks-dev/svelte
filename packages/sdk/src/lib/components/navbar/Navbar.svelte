@@ -86,7 +86,7 @@
     {custom} />
 
   <ToggleMenu
-    class={twMerge('ml-4 lg:hidden', custom.button)}
+    class={twMerge('ml-4 bp:hidden', custom.button)}
     {hidden}
     {toggle} />
 </NavbarWrapper>

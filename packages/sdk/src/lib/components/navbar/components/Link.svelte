@@ -17,6 +17,6 @@
   on:click
   on:dblclick
   on:keypress
-  class={twMerge('flex w-full items-center px-4 py-2 lg:w-fit lg:px-2', link.style, className)}
+  class={twMerge('flex w-full items-center px-4 py-2 bp:w-fit bp:px-2', link.style, className)}
   {size}
   {...Nav.props(link)} />

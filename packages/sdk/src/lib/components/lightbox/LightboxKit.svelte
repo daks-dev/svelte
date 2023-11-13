@@ -38,7 +38,7 @@
       icon: 'ic:round-zoom-out-map',
       dark: true
     };
-  const _sign = <SignOptions>sign;
+  const _sign = sign as SignOptions;
 </script>
 
 <LightboxList
@@ -62,7 +62,7 @@
           class={twMerge('relative flex flex-col', centered && 'items-center', custom.item)}
           custom={{
             image: twMerge(
-              adaptive && 'w-full max-w-full h-auto object-contain',
+              adaptive && 'h-auto w-full max-w-full object-contain',
               rounded && 'rounded',
               shadow && 'drop-shadow-deep hover:drop-shadow-hard',
               scale && 'hover:scale-105',
@@ -72,7 +72,7 @@
               custom.inner?.image
             ),
             caption: twMerge(
-              'pt-2 flex flex-col',
+              'flex flex-col pt-2',
               centered && 'text-center',
               (shadow || scale) && (adaptive ? 'mt-4' : 'mt-2'),
               custom.inner?.caption

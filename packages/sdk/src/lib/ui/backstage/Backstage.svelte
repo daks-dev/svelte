@@ -32,7 +32,7 @@
   hidden>
   <slot>
     <svg
-      class="3xl:w-[10vmin] w-[35vmin] sm:w-[30vmin] md:w-[25vmin] lg:w-[20vmin] 2xl:w-[15vmin]"
+      class="w-[35vmin] sm:w-[30vmin] md:w-[25vmin] lg:w-[20vmin] 2xl:w-[15vmin] 3xl:w-[10vmin]"
       viewBox="0 0 24 24"
       fill="currentColor">
       <rect

@@ -3,9 +3,9 @@
 }
 
 #ya-site-results.custom {
-  @apply text-slate-700 dark:text-slate-300 
-         bg-transparent
-         transition-all ease-in origin-top;
+  @apply origin-top bg-transparent 
+         text-slate-700
+         transition-all ease-in dark:text-slate-300;
 }
 
 #ya-site-results.custom > div[class^='results'] {
@@ -17,11 +17,11 @@
 }
 
 #ya-site-results.custom .b-pager__arrow {
-  @apply block xs:inline
-         text-sm;
+  @apply block text-sm
+         xs:inline;
 }
 
 #ya-site-results.custom .b-pager__current,
 #ya-site-results.custom .b-pager__select {
-  @apply pt-0.5 pb-1 px-1.5 text-slate-200 rounded bg-slate-400;
+  @apply rounded bg-slate-400 px-1.5 pb-1 pt-0.5 text-slate-200;
 }
