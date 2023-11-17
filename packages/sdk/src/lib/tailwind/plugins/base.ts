@@ -80,6 +80,9 @@ export default plugin(({ addBase }) => {
       'scroll-behavior': 'smooth'
     },
     ['@supports not (-moz-appearance: none)']: {
+      ['.overflow-y-offset']: {
+        'padding-right': '0'
+      },
       ['body.overflow-y-hidden, body.overflow-y-hidden .overflow-y-offset']: {
         'padding-right': 'var(--scrollbar-size) !important'
       }

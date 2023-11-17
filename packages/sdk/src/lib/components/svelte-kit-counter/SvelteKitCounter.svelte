@@ -41,8 +41,8 @@
       <img
         class="
           lazy
-          hover:drop-shadow-deep
-          transition duration-300 ease-in-out"
+          transition
+          duration-300 ease-in-out hover:shadow-lg"
         src={placeholder}
         data-src={image.src}
         width={image.width}
@@ -67,7 +67,7 @@
       aria-label="Уменьшить счётик"
       on:click={decrement}>
       <Icon
-        class="drop-shadow-deep"
+        class="shadow-lg"
         icon="ic:round-minus" />
     </button>
 
@@ -96,7 +96,7 @@
       aria-label="Увеличить счётик"
       on:click={increment}>
       <Icon
-        class="drop-shadow-deep"
+        class="shadow-lg"
         icon="ic:round-plus" />
     </button>
   </div>

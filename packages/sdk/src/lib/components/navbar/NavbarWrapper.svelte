@@ -24,7 +24,7 @@
     'fixed left-0 top-0 z-10 w-full',
     'text-lg vector-non-scaling-stroke',
     'origin-top transition-colors ease-in-out',
-    'overflow--offset',
+    'overflow-y-offset',
     className
   )}
   class:scrolled
@@ -33,8 +33,8 @@
   <div
     use:outside={close}
     class="
-      wrapper relative flex flex-wrap items-center
-      justify-end">
+      relative flex flex-wrap items-center justify-end
+      wrapper-xl">
     <slot {scrolled} />
   </div>
 </div>

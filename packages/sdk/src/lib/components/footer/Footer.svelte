@@ -23,9 +23,9 @@
   class={twMerge('py-4', className)}>
   <div
     class="
-      wrapper
-      flex flex-row items-center justify-between
-      font-mono text-2xs font-thin leading-loose text-gray-500 xs:text-xs sm:text-sm sm:tracking-wide">
+      flex
+      flex-row items-center justify-between font-mono
+      text-2xs font-thin leading-loose text-gray-500 wrapper-xl xs:text-xs sm:text-sm sm:tracking-wide">
     {#if copylink}
       <Link
         class="

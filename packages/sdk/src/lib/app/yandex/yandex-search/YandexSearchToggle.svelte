@@ -9,7 +9,7 @@
 
   let className: ClassName = undefined;
   export { className as class };
-  export let classModal: ClassName = 'bg-inherit rounded-lg drop-shadow-lg'; //  'bg-neutral-50/95 dark:bg-slate-700/95 rounded-lg drop-shadow-lg';
+  export let classModal: ClassName = 'bg-inherit rounded-lg shadow-lg'; //  'bg-neutral-50/95 dark:bg-slate-700/95 rounded-lg shadow-lg';
 
   export let duration = 300;
   export let size: number | string = '1.25em';

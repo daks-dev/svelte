@@ -46,9 +46,6 @@ export default plugin(({ addUtilities }) => {
         display: 'table',
         clear: 'both'
       }
-    },
-    ['.overflow-y-offset']: {
-      'padding-right': '0'
     }
   });
 });

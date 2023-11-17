@@ -66,6 +66,8 @@ export { default as DropdownWrapper } from './ui/dropdown/DropdownWrapper.svelte
 
 export { default as Figure } from './ui/figure/Figure.svelte';
 
+export { default as FormattedDate } from './ui/formatted-date/FormattedDate.svelte';
+
 export type { NavBrand, NavItem, NavSite } from './ui/navigate/index.d.ts';
 export { default as Nav } from './ui/navigate/Nav.js';
 export { default as Link } from './ui/navigate/Link.svelte';

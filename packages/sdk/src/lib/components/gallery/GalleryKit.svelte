@@ -35,7 +35,7 @@
       custom.image,
       adaptive && 'h-auto w-full max-w-full object-contain',
       rounded && 'rounded',
-      shadow && 'drop-shadow-deep hover:drop-shadow-md',
+      shadow && 'shadow-lg hover:shadow-md',
       scale && 'hover:scale-105',
       grayscale && 'grayscale hover:grayscale-0',
       invert && 'invert hover:invert-0',

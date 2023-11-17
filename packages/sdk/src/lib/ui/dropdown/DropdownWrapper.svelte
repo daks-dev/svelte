@@ -3,8 +3,7 @@
   import Link from '../navigate/Link.svelte';
   import twMerge from '../../tailwind/tailwind-merge.js';
 
-  let classWrapper: ClassName =
-    'z-10 bg-neutral-50/95 dark:bg-slate-700/95 rounded-md drop-shadow-md';
+  let classWrapper: ClassName = 'z-10 bg-neutral-50/95 dark:bg-slate-700/95 rounded-md shadow-md';
   export { classWrapper as class };
   export let classLink: ClassName = 'py-2 px-4 hover:bg-gray-400/25';
 

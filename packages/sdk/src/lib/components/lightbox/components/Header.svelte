@@ -29,7 +29,7 @@
         transition-all duration-300
         ease-in hover:scale-125 hover:cursor-pointer
         hover:text-white"
-      class:drop-shadow-lg={fullscreen}
+      class:shadow-lg={fullscreen}
       class:pr-2={fullscreen && !options.buttonClose}
       aria-label="full screen">
       <svg
@@ -54,7 +54,7 @@
         py-1.5
         transition-all duration-300 ease-in
         hover:scale-125 hover:cursor-pointer hover:text-white"
-      class:drop-shadow-lg={fullscreen}
+      class:shadow-lg={fullscreen}
       class:pr-2={fullscreen}
       aria-label="close">
       <svg

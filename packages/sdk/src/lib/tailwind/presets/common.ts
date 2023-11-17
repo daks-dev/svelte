@@ -17,6 +17,7 @@ import onload from '../plugins/onload.js';
 import onscroll from '../plugins/onscroll.js';
 import oversee from '../plugins/oversee.js';
 import utilities from '../plugins/utilities.js';
+import wrapper from '../plugins/wrapper.js';
 import strokeLinecap from '../plugins/svg/stroke-linecap.js';
 import strokeLinejoin from '../plugins/svg/stroke-linejoin.js';
 import vectorEffect from '../plugins/svg/vector-effect.js';
@@ -117,6 +118,7 @@ export default {
   plugins: [
     base,
     components,
+    wrapper,
     utilities,
     lazy,
     gradient,

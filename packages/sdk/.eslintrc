@@ -17,7 +17,7 @@
     "mdx/code-blocks": true,
     "mdx/remark": true,
     "tailwindcss": {
-      "callees": ["twMerge", "classnames", "clsx", "ctl"],
+      "callees": ["twMerge", "twJoin", "classnames", "clsx", "ctl"],
       "config": "./tailwind.config.ts"
     }
   },
@@ -70,18 +70,13 @@
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": [
       "error",
-      {
-        "vars": "all",
-        "varsIgnorePattern": "^_",
-        "args": "after-used",
-        "argsIgnorePattern": "^_"
-      }
+      { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
     ],
-    "tailwindcss/no-custom-classname": "off",
+    "tailwindcss/no-custom-classname": ["warn", { "whitelist": ["lazy"] }],
     "tailwindcss/classnames-order": [
       "warn",
       {
-        "callees": ["twMerge", "classnames", "clsx", "ctl"],
+        "callees": ["twMerge", "twJoin", "classnames", "clsx", "ctl"],
         "config": "./tailwind.config.ts"
       }
     ]

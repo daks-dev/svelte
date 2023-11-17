@@ -27,7 +27,7 @@
       ? 'bg-black/20'
       : auto
       ? 'bg-black/20 dark:bg-white/20'
-      : 'drop-shadow-md',
+      : 'shadow-md',
     link ? 'text-sky-600 dark:text-sky-400' : 'text-white',
     'opacity-70 group-hover:opacity-100',
     'group-hover:mt-1 group-hover:animate-bounce',

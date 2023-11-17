@@ -21,7 +21,7 @@
     'flex flex-col lg:gap-x-3 bp:flex-row bp:flex-nowrap 2xl:gap-x-5',
     'max-w-xs sm:max-w-md bp:max-w-none',
     'font-normal uppercase tracking-wide',
-    '-bp:rounded-md -bp:drop-shadow-md',
+    '-bp:rounded-md -bp:shadow-md',
     '-bp:aria-hidden:scale-75 -bp:aria-hidden:opacity-0 -bp:aria-hidden:disabled',
     'origin-top-left onload:transition',
     // 'first:rounded-t-md last:rounded-b-md',
