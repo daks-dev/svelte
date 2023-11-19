@@ -25,7 +25,7 @@
 </script>
 
 {#if DEV}
-  <div class="content mb-8 flex items-center justify-start">
+  <div class="mb-8 flex items-center justify-start wrapper-lg">
     <button
       on:click|preventDefault={upload}
       type="button"
@@ -49,7 +49,7 @@
   </div>
 {/if}
 
-<div class="content divide-y divide-dotted">
+<div class="divide-y divide-dotted wrapper-lg">
   {#if local.length}
     <Bundle
       prefix="local"

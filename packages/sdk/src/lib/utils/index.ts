@@ -4,6 +4,9 @@ export const uuid = () =>
     .toString(16)
     .substring(1);
 
+export const random = (x?: unknown[]): number =>
+  x?.length ? Math.floor(Math.random() * x.length) : -1;
+
 export const isHover = () => window?.matchMedia('(hover: hover)').matches;
 
 export const isTouch = () =>
