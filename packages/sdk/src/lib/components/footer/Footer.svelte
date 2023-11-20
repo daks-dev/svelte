@@ -20,14 +20,14 @@
 
 <footer
   id="footer"
-  class={twMerge('py-4', className)}>
-  <div
-    class="
-      flex
-      flex-row items-center justify-between font-mono
-      text-2xs font-thin
-      leading-loose text-gray-600 wrapper-xl dark:text-gray-400 xs:text-xs
-      sm:text-sm sm:tracking-wide">
+  class={twMerge(
+    'py-4',
+    'font-mono text-xs font-thin leading-none',
+    'text-gray-600 dark:text-gray-400',
+    'sm:text-sm sm:tracking-wide',
+    className
+  )}>
+  <div class="flex flex-row items-center justify-between wrapper-xl">
     {#if copylink}
       <Link
         class="
@@ -57,16 +57,16 @@
     <slot />
 
     {#if links.length}
-      <nav class="mx-4 flex flex-wrap items-center">
+      <nav class="mx-4 flex flex-wrap items-center gap-2">
         {#each links as link}
           <Link
             class="
-              px-4
+              px-2
               text-right
               hover:text-sky-500 step:text-slate-700
               page:text-cyan-700 dark:hover:text-sky-300 dark:step:text-slate-300"
             {...Nav.props(link)}
-            size="1.25em" />
+            size="1.5em" />
         {/each}
       </nav>
     {/if}

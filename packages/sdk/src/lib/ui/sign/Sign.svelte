@@ -20,14 +20,10 @@
   class={twMerge(
     'absolute z-10',
     small ? 'h-5 w-5' : 'h-7 w-7',
-    (auto || light || dark) && 'rounded-full p-1',
-    light
-      ? 'bg-white/20'
-      : dark
-      ? 'bg-black/20'
-      : auto
-      ? 'bg-black/20 dark:bg-white/20'
-      : 'shadow-md',
+    (auto || light || dark) && 'rounded-full p-1 shadow-md',
+    light && 'bg-white/20',
+    dark && 'bg-black/20',
+    auto && 'bg-black/20 dark:bg-white/20',
     link ? 'text-sky-600 dark:text-sky-400' : 'text-white',
     'opacity-70 group-oversee:opacity-100',
     'group-oversee:mt-1 group-oversee:animate-bounce',
