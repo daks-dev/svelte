@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { env } from '$env/dynamic/public';
   import { beforeNavigate, afterNavigate } from '$app/navigation';
   import Nav from '../../ui/navigate/Nav.js';
   import Swiping from '../../ui/swiping/Swiping.svelte';
@@ -21,7 +22,11 @@
 
   export let duration = 300;
 
+  let innerWidth: number;
   let hidden = true;
+  const breakpoint = Number(env.PUBLIC_BREAKPOINT);
+  $: hidden = innerWidth < (isNaN(breakpoint) ? 800 : breakpoint);
+
   const close = () => (hidden = true);
   const toggle = () => (hidden = !hidden);
 
@@ -43,6 +48,7 @@
   afterNavigate(() => setTimeout(() => (disabled = false), 500));
 </script>
 
+<svelte:window bind:innerWidth />
 <svelte:body on:keydown={handleKey} />
 
 {#if scope.length}

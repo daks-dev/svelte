@@ -1,6 +1,7 @@
 <script lang="ts">
   import { BROWSER } from 'esm-env';
   import { onMount } from 'svelte';
+  import { env } from '$env/dynamic/public';
   import { page, navigating } from '$app/stores';
   import { counter } from './index.js';
 
@@ -9,10 +10,7 @@
   export let title: string | undefined = undefined;
   export let description: string | undefined = undefined;
   export let canonical =
-    process.env.APP_CANONICAL &&
-    `${new URL(process.env.APP_CANONICAL).origin}${$page.url.pathname}`;
-
-  // const counter = process.env.YA_COUNTER ?? '';
+    env.PUBLIC_APP_CANONICAL && `${new URL(env.PUBLIC_APP_CANONICAL).origin}${$page.url.pathname}`;
 
   if (BROWSER && counter) {
     let interval: ReturnType<typeof setInterval>;

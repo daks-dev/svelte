@@ -24,6 +24,8 @@
 
   export let items: NavItem[] = [];
 
+  export let index: number | undefined = undefined;
+
   const id = uuid();
 
   let hidden = true;
@@ -59,8 +61,8 @@
   on:click={close}
   on:keydown={handleKey}
   role="button"
-  tabindex={hidden ? -1 : 0}
-  class={twMerge('relative', inline ? 'inline-flex' : 'flex', classWrapper)}>
+  class={twMerge('relative', inline ? 'inline-flex' : 'flex', classWrapper)}
+  tabindex={index}>
   <Link
     on:click={handleClick}
     on:dblclick={handleDblClick}
@@ -72,7 +74,8 @@
     pointer
     aria-expanded={!hidden}
     aria-haspopup={!hidden}
-    aria-controls={id}>
+    aria-controls={id}
+    tabindex={index}>
     <svelte:fragment slot="after">
       {#if sign}
         <Icon

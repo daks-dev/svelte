@@ -85,7 +85,7 @@
       {custom} />
 
     <ColorTheme
-      class={twMerge('ml-4', centered ? 'bp:ml-auto' : 'bp:ml-8', custom.button)}
+      class={twMerge('ml-4', centered ? 'bp:ml-auto' : 'bp:ml-4 xl:ml-8', custom.button)}
       {size} />
 
     <YandexSearchToggle

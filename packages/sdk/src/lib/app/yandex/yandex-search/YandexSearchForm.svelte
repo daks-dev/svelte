@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import { env } from '$env/dynamic/public';
   import { page } from '$app/stores';
   import { goto } from '$app/navigation';
   import Icon from '../../iconify/Icon.svelte';
@@ -15,7 +16,7 @@
   export let button = true;
   export let callback: null | (() => void) = null;
 
-  const searchid = process.env.YA_SEARCHID;
+  const searchid = env.PUBLIC_YA_SEARCHID;
 
   let form: HTMLFormElement;
   let text: null | string;

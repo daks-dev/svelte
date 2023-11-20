@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { env } from '$env/dynamic/public';
   import { page } from '$app/stores';
 
   type AppMeta = Record<'themeColor' | 'tileColor' | 'shortName', string>;
@@ -10,8 +11,7 @@
   export let title: string | undefined = undefined;
   export let description: string | undefined = undefined;
   export let canonical =
-    process.env.APP_CANONICAL &&
-    `${new URL(process.env.APP_CANONICAL).origin}${$page.url.pathname}`;
+    env.PUBLIC_APP_CANONICAL && `${new URL(env.PUBLIC_APP_CANONICAL).origin}${$page.url.pathname}`;
 </script>
 
 <svelte:head>

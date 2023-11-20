@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { env } from '$env/dynamic/public';
   import Icon from '../../app/iconify/Icon.svelte';
   import twMerge from '../../tailwind/tailwind-merge.js';
 
@@ -17,7 +18,7 @@
   };
   const { itemtype, name, logo, email, telephone, address } = microdata.organization;
 
-  const canonical = process.env.APP_CANONICAL ? new URL(process.env.APP_CANONICAL).origin : '';
+  const canonical = env.PUBLIC_APP_CANONICAL ? new URL(env.PUBLIC_APP_CANONICAL).origin : '';
 </script>
 
 <div

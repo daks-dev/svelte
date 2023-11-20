@@ -3,7 +3,9 @@ import defaultTheme from 'tailwindcss/defaultTheme.js';
 import type { Config } from 'tailwindcss';
 
 import screens from '../screens.js';
-const breakpoint = 1024; // process.env.PUBLIC_BREAKPOINT ?? 1024;
+
+import 'dotenv/config';
+const breakpoint = process.env.PUBLIC_BREAKPOINT ?? 800;
 
 import animationPlayState from '../plugins/animation-play-state.js';
 import aria from '../plugins/aria.js';
@@ -92,6 +94,10 @@ export default {
       },
       content: {
         null: '""'
+      },
+      dropShadow: {
+        deep: ['0 4px 3px rgb(0 0 0 / 0.4)', '0 2px 2px rgb(0 0 0 / 0.2)'],
+        hard: ['0 4px 3px rgb(0 0 0 / 0.7)', '0 2px 2px rgb(0 0 0 / 0.4)']
       },
       gradientColorStopPositions: {
         '150%': '150%'

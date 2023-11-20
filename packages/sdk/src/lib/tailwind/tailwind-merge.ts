@@ -11,6 +11,7 @@ const local = {
   'bg-image': [{ bg: ['linear', 'radial', 'loading', 'waiting'] }],
   'bg-size': [{ bg: ['75%', '50%', '33%', '25%', '20%', '10%', '5%'] }],
   content: [{ content: ['null'] }],
+  'drop-shadow': [{ 'drop-shadow': ['deep', 'hard'] }],
   'font-size': [{ text: ['3xs', '2xs', '1.5xl', '2.5xl', '3.5xl', '4.5xl'] }],
   'gradient-from-pos': [{ from: ['150%'] }],
   'gradient-to-pos': [{ to: ['150%'] }],

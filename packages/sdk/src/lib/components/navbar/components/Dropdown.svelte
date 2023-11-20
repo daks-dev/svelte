@@ -11,6 +11,9 @@
 
   export let link: Partial<NavItem>;
   export let size: number | string = '1.25em';
+
+  export let index: number | undefined = undefined;
+
   export let duration = 300;
 
   // const base = `${link.base ?? ''}${link.href ?? ''}`;
@@ -20,8 +23,9 @@
   let:id
   let:hidden
   class={twMerge('px-4 py-2 bp:px-2', link.class, classLink, className)}
+  {...Nav.props(link)}
   {size}
-  {...Nav.props(link)}>
+  {index}>
   <DropdownWrapper
     {id}
     {hidden}

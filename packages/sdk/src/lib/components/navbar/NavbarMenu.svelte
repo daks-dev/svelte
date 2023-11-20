@@ -18,8 +18,9 @@
   class={twMerge(
     'absolute left-0 top-full z-0 ml-1 -bp:mt-1 bp:static bp:ml-4',
     // 'grid grid-cols-1 bp:auto-cols-max bp:grid-flow-col lg:gap-x-3 2xl:gap-x-5',
-    'flex flex-col lg:gap-x-3 bp:flex-row bp:flex-nowrap 2xl:gap-x-5',
     'max-w-xs sm:max-w-md bp:max-w-none',
+    'flex flex-col',
+    'bp:flex-row bp:flex-nowrap bp:gap-x-2 xl:gap-x-5',
     'font-normal uppercase tracking-wide',
     '-bp:rounded-md -bp:shadow-md',
     '-bp:aria-hidden:scale-75 -bp:aria-hidden:opacity-0 -bp:aria-hidden:disabled',
@@ -28,13 +29,14 @@
     className
   )}
   style:transition-duration={`${duration}ms`}
-  aria-hidden={hidden}>
+  aria-hidden={hidden ? true : undefined}>
   {#each links as link}
     {#if link.links}
       <Dropdown
         on:click
         {classLink}
-        {link} />
+        {link}
+        index={hidden ? -1 : undefined} />
     {:else}
       <Link
         on:click
