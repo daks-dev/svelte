@@ -43,7 +43,7 @@
   on:click={toggle}
   class={twMerge(className)}
   type="button"
-  aria-label="label">
+  aria-label={label}>
   <span class="sr-only">{@html label}</span>
   <Icon
     class="pointer-events-none"

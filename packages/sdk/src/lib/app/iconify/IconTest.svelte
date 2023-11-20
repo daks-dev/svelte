@@ -5,10 +5,10 @@
   let className: undefined | string = undefined;
   export { className as class };
 
-  export let icon: undefined | string = undefined;
-  export let size: undefined | number | string = undefined;
-  export let width = size;
-  export let height = size;
+  export let label: string | undefined = undefined;
+  export let icon: string | undefined = undefined;
+
+  export let size: number | string | undefined = undefined;
 </script>
 
 {#if icon}
@@ -16,13 +16,12 @@
     <Icon
       class={className}
       {icon}
-      {width}
-      {height}>
-      <slot />
+      {size}>
+      {@html label}
     </Icon>
   {:else}
-    {@html icon}
+    {@html label ?? icon}
   {/if}
 {:else}
-  <slot />
+  {@html label}
 {/if}

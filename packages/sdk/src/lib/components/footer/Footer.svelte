@@ -25,7 +25,9 @@
     class="
       flex
       flex-row items-center justify-between font-mono
-      text-2xs font-thin leading-loose text-gray-500 wrapper-xl xs:text-xs sm:text-sm sm:tracking-wide">
+      text-2xs font-thin
+      leading-loose text-gray-600 wrapper-xl dark:text-gray-400 xs:text-xs
+      sm:text-sm sm:tracking-wide">
     {#if copylink}
       <Link
         class="
@@ -46,7 +48,8 @@
           hover:text-sky-500 dark:hover:text-sky-300"
         label="local:svelte-logo"
         href="//kit.svelte.dev"
-        size="18">
+        size="1.5em"
+        aria-label="svelte kit">
         Svelte Kit
       </Link>
     {/if}
@@ -60,10 +63,10 @@
             class="
               px-4
               text-right
-              hover:text-sky-500 step:text-slate-800
+              hover:text-sky-500 step:text-slate-700
               page:text-cyan-700 dark:hover:text-sky-300 dark:step:text-slate-300"
             {...Nav.props(link)}
-            size="18" />
+            size="1.25em" />
         {/each}
       </nav>
     {/if}

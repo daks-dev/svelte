@@ -4,6 +4,7 @@
   import Nav from './Nav.js';
 
   export let label: string | undefined = undefined;
+  export let icon: string | undefined = undefined;
 
   export let href: string | undefined = undefined;
   export let base: string | undefined = undefined;
@@ -14,30 +15,27 @@
   export let role: string | undefined = undefined;
   export let itemprop: string | undefined = undefined;
 
-  export let handle: ((...x: unknown[]) => unknown) | undefined = undefined;
+  // export let handle: ((...x: unknown[]) => unknown) | undefined = undefined;
 
   export let disallow = false;
 
+  export let size: undefined | number | string = undefined;
+  export let pointer = false;
+
   const item = new Nav({
-    label,
     href,
     target,
     rel,
-    itemprop,
     role,
-    handle,
+    itemprop,
     base,
     disallow
   });
-
-  export let size: undefined | number | string = undefined;
-  export let pointer = false;
   item.pointer = pointer;
 
   $: item.pathname = $page.url.pathname;
 </script>
 
-<!-- sveltekit:prefetch / sveltekit:prefetch -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <svelte:element
   this={item.tag}
@@ -48,13 +46,18 @@
   class:inherit={item.tag === 'button'}
   class:disabled={item.active && !item.pointer}
   {...item.props}
+  aria-label={icon || $$slots.default ? label : undefined}
   {...$$restProps}>
   <slot name="before" />
-  <IconTest
-    class="pointer-events-none"
-    icon={label}
-    {size}>
-    <slot />
-  </IconTest>
+  <slot>
+    {#if icon}
+      <span class="sr-only">{@html label}</span>
+    {/if}
+    <IconTest
+      class="disabled"
+      {label}
+      {icon}
+      {size} />
+  </slot>
   <slot name="after" />
 </svelte:element>

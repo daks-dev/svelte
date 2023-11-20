@@ -9,14 +9,19 @@
 
   export let link: Partial<NavItem>;
   export let base = '';
-  link.base ??= base;
+
   export let size: number | string = '1.25em';
+
+  export let hidden: boolean;
+
+  link.base ??= base;
 </script>
 
 <Link
   on:click
   on:dblclick
   on:keypress
-  class={twMerge('flex w-full items-center px-4 py-2 bp:w-fit bp:px-2', link.style, className)}
+  class={twMerge('flex w-full items-center px-4 py-2 bp:w-fit bp:px-2', link.class, className)}
+  {...Nav.props(link)}
   {size}
-  {...Nav.props(link)} />
+  tabindex={hidden ? -1 : undefined} />

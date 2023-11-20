@@ -16,7 +16,7 @@
 <Link
   class={twMerge(className, brand.custom?.link)}
   href="/"
-  aris-label={label}>
+  aria-label={label}>
   <span class="sr-only">{@html label}</span>
   {#if $page.url.pathname === '/'}
     {#if icon.home}

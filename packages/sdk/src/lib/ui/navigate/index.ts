@@ -7,18 +7,22 @@ export interface NavBrand {
   size: number | string;
 }
 
-export interface NavItem {
-  label: string;
+export interface NavLink {
   href: string;
   target: string;
   title: string;
   rel: string;
-  itemprop: string;
   role: string;
-  handle: (...x: unknown[]) => unknown;
+  itemprop: string;
+}
+
+export interface NavItem extends NavLink {
+  class: ClassName;
+  label: string;
+  icon: string;
   base: string;
   disallow: boolean;
-  style: string;
+  handle: (...x: unknown[]) => unknown;
   links: Partial<NavItem>[];
 }
 

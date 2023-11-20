@@ -1,18 +1,14 @@
 import type { NavItem } from './index.js';
 
 class Nav implements Partial<NavItem> {
-  label?: string;
   href?: string;
   target?: string;
-  title?: string;
   rel?: string;
-  itemprop?: string;
   role?: string;
-  handle?: (...x: unknown[]) => unknown;
+  itemprop?: string;
+
   base?: string;
   disallow?: true;
-  style?: string;
-  links?: NavItem[];
 
   constructor(args: Partial<NavItem>) {
     Object.assign(this, args);
@@ -54,7 +50,7 @@ class Nav implements Partial<NavItem> {
   get current(): 'page' | 'step' | undefined {
     return this.active
       ? 'page'
-      : this.href && this.href !== '/' && this.pathname.indexOf(this.href) === 0
+      : this.href && this.href !== '/' && this.pathname.startsWith(this.href)
       ? 'step'
       : undefined;
   }
@@ -74,8 +70,7 @@ class Nav implements Partial<NavItem> {
   }
 
   static props = function (item: Partial<NavItem>) {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const { links, style, disallow, base, handle, ...props } = item;
+    const { class: _0, base: _1, disallow: _2, handle: _3, links: _4, ...props } = item;
     return props;
   };
 

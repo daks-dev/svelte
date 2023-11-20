@@ -39,7 +39,8 @@
       <Link
         on:click
         class={twMerge('flex items-center', classLink)}
-        {link} />
+        {link}
+        {hidden} />
     {/if}
   {/each}
   <slot />

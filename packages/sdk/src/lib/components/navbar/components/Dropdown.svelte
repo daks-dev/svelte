@@ -19,7 +19,7 @@
 <Dropdown
   let:id
   let:hidden
-  class={twMerge('px-4 py-2 bp:px-2', link.style, classLink, className)}
+  class={twMerge('px-4 py-2 bp:px-2', link.class, classLink, className)}
   {size}
   {...Nav.props(link)}>
   <DropdownWrapper
@@ -33,7 +33,7 @@
       focus:outline-none dark:divide-slate-600/95 dark:bg-slate-700/95 sm:max-w-sm
       md:max-w-md bp:left-1/2
       bp:mt-1 bp:origin-top bp:-translate-x-1/2
-      bp:shadow-md bp:shadow-none"
+      bp:shadow-md"
     classLink={twMerge(
       'justify-end px-4 py-2 bp:justify-center',
       'text-right bp:text-center',
