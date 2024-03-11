@@ -1,0 +1,49 @@
+<script lang="ts">
+  import twMerge from '../../tailwind/tailwind-merge.js';
+  import Dropdown from './components/Dropdown.svelte';
+  import Link from './components/Link.svelte';
+  import type { NavItem } from '../../ui/navigate/index.d.ts';
+
+  let className: ClassName = undefined;
+  export { className as class };
+  export let classLink: ClassName = undefined;
+
+  export let links: Partial<NavItem>[];
+  export let hidden: boolean;
+  export let duration = 300;
+</script>
+
+<nav
+  id="navbar-menu"
+  class={twMerge(
+    'absolute left-0 top-full z-0 ml-1 -bp:mt-1 bp:static bp:ml-4',
+    // 'grid grid-cols-1 bp:auto-cols-max bp:grid-flow-col lg:gap-x-3 2xl:gap-x-5',
+    'max-w-xs sm:max-w-md bp:max-w-none',
+    'flex flex-col',
+    'bp:flex-row bp:flex-nowrap bp:gap-x-2 xl:gap-x-5',
+    'font-normal uppercase tracking-wide',
+    '-bp:rounded-md -bp:shadow-md',
+    '-bp:aria-hidden:scale-75 -bp:aria-hidden:opacity-0 -bp:aria-hidden:disabled',
+    'origin-top-left onload:transition',
+    // 'first:rounded-t-md last:rounded-b-md',
+    className
+  )}
+  style:transition-duration={`${duration}ms`}
+  aria-hidden={hidden ? true : undefined}>
+  {#each links as link}
+    {#if link.links}
+      <Dropdown
+        on:click
+        {classLink}
+        {link}
+        index={hidden ? -1 : undefined} />
+    {:else}
+      <Link
+        on:click
+        class={twMerge('flex items-center', classLink)}
+        {link}
+        {hidden} />
+    {/if}
+  {/each}
+  <slot />
+</nav>
