@@ -1,0 +1,128 @@
+{
+  "name": "@daks.dev/svelte.kit",
+  "version": "0.1.6",
+  "description": "DAKS.DEV Svelte KIT",
+  "scripts": {
+    "package": "svelte-kit sync && svelte-package && publint",
+    "prepublishOnly": "pnpm run package",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "test": "vitest --ui",
+    "lint": "prettier --plugin=prettier-plugin-svelte --check . && eslint .",
+    "format": "prettier --plugin=prettier-plugin-svelte --write .",
+    "update": "pnpm up"
+  },
+  "devDependencies": {
+    "@rollup/pluginutils": "^5.0.4",
+    "@sveltejs/kit": "^1.25.1",
+    "@sveltejs/package": "^2.2.2",
+    "@types/cookie": "^0.5.2",
+    "@types/html-minifier-terser": "^7.0.0",
+    "@types/js-yaml": "^4.0.6",
+    "@vitest/ui": "^0.34.5",
+    "cookie": "^0.5.0",
+    "dotenv": "^16.3.1",
+    "html-minifier-terser": "^7.2.0",
+    "js-yaml": "^4.1.0",
+    "jsdom": "22.1.0",
+    "publint": "^0.2.2",
+    "svelte": "^4.2.19",
+    "svelte-check": "^3.5.2",
+    "tailwind-merge": "^1.14.0",
+    "tailwindcss": "^3.4.17",
+    "tslib": "^2.8.1",
+    "typescript": "^5.7.3",
+    "vanilla-lazyload": "^17.8.4",
+    "vite": "^5.4.14",
+    "vitest": "^0.34.6"
+  },
+  "peerDependencies": {
+    "@sveltejs/kit": "^1.25.0",
+    "svelte": "^4.2.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "svelte": "./dist/index.js"
+    },
+    "./types": {
+      "types": "./dist/types.d.ts"
+    },
+    "./server": {
+      "types": "./dist/server/index.d.ts",
+      "import": "./dist/server/index.js"
+    },
+    "./stores": {
+      "types": "./dist/stores/index.d.ts",
+      "import": "./dist/stores/index.js"
+    },
+    "./vite": {
+      "types": "./dist/server/vite/index.d.ts",
+      "import": "./dist/server/vite/index.js"
+    },
+    "./tailwindcss/*": {
+      "types": "./dist/assets/tailwindcss/*.d.ts",
+      "import": "./dist/assets/tailwindcss/*.js",
+      "require": "./dist/assets/tailwindcss/*.js"
+    },
+    "./tailwindcss": "./dist/assets/tailwindcss/index.css",
+    "./fonts/*": "./dist/assets/fonts/*.css",
+    "./icons/*": "./dist/assets/icons/*",
+    "./images/*": "./dist/assets/images/*",
+    "./styles/*": "./dist/assets/styles/*",
+    "./package.json": "./package.json"
+  },
+  "typesVersions": {
+    ">4.0": {
+      "types": [
+        "./dist/types.d.ts"
+      ],
+      "server": [
+        "./dist/server/index.d.ts"
+      ],
+      "stores": [
+        "./dist/stores/index.d.ts"
+      ],
+      "vite": [
+        "./dist/server/vite/index.d.ts"
+      ],
+      "tailwindcss/*": [
+        "./dist/assets/tailwindcss/*.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist",
+    "!dist/**/*.test.*",
+    "!dist/**/*.spec.*"
+  ],
+  "svelte": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "engines": {
+    "node": ">=16.20.2",
+    "pnpm": "^8.7.0"
+  },
+  "browserslist": [
+    "last 2 version",
+    "not dead"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/daks-dev/svelte",
+    "directory": "packages/kit"
+  },
+  "author": {
+    "name": "DVA",
+    "email": "mail@daks.dev",
+    "url": "https://daks.dev"
+  },
+  "bugs": "https://github.com/daks-dev/svelte/issues",
+  "homepage": "https://svelte.daks.dev/",
+  "keywords": [
+    "svelte",
+    "sveltekit",
+    "tailwindcss",
+    "vite-plugin"
+  ]
+}
