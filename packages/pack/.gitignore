@@ -6,7 +6,7 @@
 .vercel
 
 # ide
-.vscode
+.vscode/sftp.json
 .idea
 
 # misc
@@ -30,13 +30,10 @@ pnpm-lock.yaml
 build/
 dist/
 dist-ssr/
+out/
 
 .pnp
 .pnp.js
-
-packages/**/*.map
-packages/**/test/**.css
-packages/**/CHANGELOG.md
 
 # testing
 coverage/
@@ -58,5 +55,3 @@ next-env.d.ts
 .master/
 
 *.session.sql
-
-sites/*
